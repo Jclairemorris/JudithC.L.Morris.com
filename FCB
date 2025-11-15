@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FCB Chicago Gallery | Judith C. L. Morris</title>
+
+  <!-- Fonts + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{--gold:#D4AF37;--ink:#0a0a0a;--card:#111;--line:#171717}
+    html,body{background:var(--ink);color:#f3f4f6;scroll-behavior:smooth}
+    .container-x{width:min(1140px,92vw);margin-inline:auto}
+
+    .luxe-chrome-text{
+      font-family:'Cinzel Decorative',serif;
+      background:linear-gradient(180deg,#f7f7f7 0%,#e7cf86 15%,#b88a2a 35%,#f4e7b2 50%,#9a6a12 65%,#f6f2da 82%,#7a5310 100%);
+      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+      text-shadow:0 1px 0 rgba(255,255,255,.22),0 2px 8px rgba(0,0,0,.45);
+      letter-spacing:-.02em
+    }
+
+    .btn{
+      display:inline-block;
+      border:1px solid rgba(255,255,255,.25);
+      padding:.7rem 1.15rem;
+      border-radius:999px;
+      font-weight:600;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      font-size:.8rem;
+      transition:.3s;
+      color:#f3f4f6;
+    }
+    .btn:hover{background:var(--gold);color:#000;border-color:var(--gold)}
+
+    /* Devices */
+    .device{position:relative;display:inline-block;transition:.5s}
+    .device .screen{background:#111;overflow:hidden;width:100%;height:100%;border-radius:inherit;border:1px solid #e5e7eb}
+
+    .device-iphone{
+      border:4px solid #D4AF37;
+      border-radius:28px;
+      width:220px;
+      height:440px;
+      background:#0f0f0f;
+      box-shadow:0 10px 40px rgba(0,0,0,.55)
+    }
+    .device-iphone .notch{
+      position:absolute;
+      top:8px;
+      left:50%;
+      transform:translateX(-50%);
+      width:56px;
+      height:12px;
+      background:#0f0f0f;
+      border-radius:8px;
+      z-index:2;
+    }
+
+    .device-macbook{
+      width:min(620px,92vw);
+      perspective:1200px;
+      transform-style:preserve-3d;
+    }
+    .device-macbook .lid{
+      border-radius:12px 12px 0 0;
+      padding:8px;
+      background:#202020;
+      box-shadow:0 16px 38px rgba(0,0,0,.45);
+      border:1px solid #D4AF37;
+      transform:translateZ(12px) rotateX(.5deg);
+    }
+    .device-macbook .lid .screen{
+      height:clamp(240px,44vw,360px);
+      border-radius:10px;
+      overflow:hidden;
+      border:1px solid #e5e7eb;
+    }
+    .device-macbook .base{
+      height:32px;
+      border-radius:0 0 10px 10px;
+      background:#141414;
+      border:1px solid #D4AF37;
+      border-top:none;
+      width:104%;
+      margin-left:-2%;
+      position:relative;
+      box-shadow:0 18px 48px rgba(0,0,0,.55);
+      transform:translateZ(0) rotateX(-1.5deg);
+    }
+    .device-macbook .keyboard{
+      position:absolute;
+      left:6%;
+      right:6%;
+      top:6px;
+      height:22px;
+      border-radius:6px;
+      background:linear-gradient(#0f0f0f,#121212),
+        repeating-linear-gradient(
+          90deg,
+          transparent 0 6px,
+          rgba(255,255,255,.06) 6px 7px,
+          transparent 7px 13px
+        );
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.05),
+        inset 0 -1px 0 rgba(0,0,0,.6);
+    }
+
+    .screen img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .proj-card{
+      position:relative;
+      padding:22px;
+      background:#111;
+      border:1px solid #222;
+      border-radius:18px;
+      box-shadow:0 12px 44px rgba(0,0,0,.55);
+      transition:.3s;
+      text-align:center;
+    }
+    .proj-card:hover{border-color:#D4AF37;box-shadow:0 22px 64px rgba(212,175,55,.18)}
+
+    .brand-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(260px,1fr));
+      gap:32px;
+      justify-items:center;
+    }
+    @media(max-width:860px){
+      .brand-grid{grid-template-columns:1fr}
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="container-x pt-10 pb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">Brand Gallery</p>
+        <h1 class="luxe-chrome-text text-3xl sm:text-4xl">FCB Chicago</h1>
+      </div>
+
+      <!-- Back to brands list -->
+      <a href="brands.html" class="btn">← Back to Brands</a>
+    </div>
+
+    <p class="text-gray-300 mt-4 max-w-2xl text-sm">
+      Email and web work for FCB Chicago, including Toyota Financial Services lease renewal creative — gallery only, no case-study overlays.
+    </p>
+  </header>
+
+  <!-- GALLERY -->
+  <main class="container-x pb-16">
+    <section class="border-t border-[#1e1e1e] pt-10">
+      <div class="brand-grid">
+
+        <!-- FCB Chicago — Recommendation Engines (iPhone) -->
+        <div class="proj-card">
+          <div class="device device-iphone">
+            <div class="notch"></div>
+            <div class="screen">
+              <img src="https://i.imgur.com/8DPdaI9.jpeg" alt="FCB Chicago Recommendation Engines - iPhone Email">
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm mt-3">
+            Mobile email view for recommendation engines & dynamic content.
+          </p>
+        </div>
+
+        <!-- Toyota Financial Services — Lease Renewal (MacBook) -->
+        <div class="proj-card">
+          <div class="device device-macbook">
+            <div class="lid">
+              <div class="screen">
+                <img src="https://i.imgur.com/hV16yVB.jpeg" alt="Toyota Financial Services Lease Renewal - Web">
+              </div>
+            </div>
+            <div class="base">
+              <div class="keyboard"></div>
+            </div>
+          </div>
+          <p class="text-gray-300 text-sm mt-3">
+            Desktop web layout for Toyota Financial Services lease renewal flow.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-xs text-gray-500 pb-10">© 2025 Judith C. L. Morris</footer>
+
+</body>
+</html>
