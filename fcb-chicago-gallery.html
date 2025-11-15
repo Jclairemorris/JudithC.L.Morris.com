@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FCB Chicago Gallery | Judith C. L. Morris</title>
 
-  <!-- Fonts + Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root{--gold:#D4AF37;--ink:#0a0a0a;--card:#111;--line:#171717}
+    :root{--gold:#D4AF37;--ink:#050509;--card:#111;--line:#171717}
     html,body{background:var(--ink);color:#f3f4f6;scroll-behavior:smooth}
     .container-x{width:min(1140px,92vw);margin-inline:auto}
     .font-inter{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
@@ -37,140 +36,109 @@
     .btn:hover{background:var(--gold);color:#000;border-color:var(--gold)}
 
     /* Devices */
-    .device{position:relative;display:inline-block}
-    .device .screen{overflow:hidden;width:100%;height:100%;border-radius:inherit}
-
-    .device-iphone{
-      border:4px solid var(--gold);
-      border-radius:28px;
-      width:230px;
-      height:460px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.55)
-    }
-    .device-iphone .notch{
-      position:absolute;top:8px;left:50%;transform:translateX(-50%);
-      width:56px;height:12px;background:#0f0f0f;border-radius:8px;
-    }
-
-    .device-ipad{
-      border:6px solid var(--gold);
-      border-radius:18px;
-      width:330px;
-      height:440px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.55)
-    }
-
-    .device-browser{
-      width:min(480px,88vw);
-      border:2px solid var(--gold);
-      border-radius:12px;
-      background:#0f0f10;
-      box-shadow:0 16px 40px rgba(0,0,0,.55);
-    }
-    .device-browser .chrome{
-      height:32px;
-      background:linear-gradient(180deg,#f5f5f5,#e5e5e5);
-      display:flex;
-      align-items:center;
-      gap:8px;
-      padding:0 12px;
-      border-bottom:1px solid var(--gold);
-      border-radius:12px 12px 0 0;
-    }
+    .device{position:relative;display:inline-block;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+    .device .screen{background:#111;overflow:hidden;width:100%;height:100%;border-radius:inherit;border:1px solid #e5e7eb}
+    .device-iphone{border:4px solid #D4AF37;border-radius:28px;width:220px;height:440px;background:#0f0f0f;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+    .device-iphone .notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:56px;height:12px;background:#0f0f0f;border-radius:8px;z-index:2;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+    .device-ipad{border:6px solid #D4AF37;border-radius:18px;width:360px;height:480px;background:#0f0f0f;box-shadow:0 10px 40px rgba(0,0,0,.5)}
+    .device-browser{width:min(560px,92vw);border:2px solid #D4AF37;border-radius:12px;background:#0f0f10;box-shadow:0 16px 40px rgba(0,0,0,.55);}
+    .device-browser .chrome{height:36px;background:linear-gradient(180deg,#f5f5f5,#e5e5e5);border-bottom:1px solid #D4AF37;border-radius:12px 12px 0 0;display:flex;align-items:center;gap:8px;padding:0 12px}
     .dot{width:10px;height:10px;border-radius:50%;background:#9ca3af}
-    .device-browser .screen{
-      height:260px;
-      border-radius:0 0 12px 12px;
-    }
+    .device-browser .screen{height:clamp(260px,45vw,360px);border-radius:0 0 12px 12px}
+    .screen img{display:block;width:100%;height:100%;object-fit:cover}
 
-    .screen img{width:100%;height:100%;object-fit:cover}
-
-    .brand-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(260px,1fr));
-      gap:36px;
-      justify-items:center;
-      align-items:flex-start;
-    }
-    @media(max-width:820px){
-      .brand-grid{grid-template-columns:1fr}
-    }
+    .brand-grid{display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:28px;justify-items:center;align-items:flex-start}
+    @media (max-width: 820px){.brand-grid{grid-template-columns:1fr}}
 
     .proj-card{
-      padding:20px;
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      justify-content:center;
+      align-items:center;
+      padding:22px;
       border-radius:18px;
       background:var(--card);
       border:1px solid var(--line);
-      text-align:center;
       box-shadow:0 12px 44px rgba(0,0,0,.55);
+      text-align:center;
+      margin-inline:auto;
     }
+    .proj-card:hover{transform:translateY(-3px);box-shadow:0 22px 64px rgba(212,175,55,.2);border-color:rgba(212,175,55,.35)}
+
+    .subtitle{color:#d1d5db;font-size:.9rem;max-width:720px;margin:0 auto;}
+    .caption{font-size:.8rem;color:#e5e7eb;max-width:400px;margin:0 auto;}
+    .stats{font-size:.8rem;color:#cbd5e1;}
   </style>
 </head>
 <body class="font-inter">
 
-<header class="container-x pt-10 pb-6">
-  <div class="flex items-center justify-between gap-4 flex-wrap">
-    <div>
-      <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">Brand Gallery</p>
-      <h1 class="luxe-chrome-text text-3xl sm:text-4xl">FCB Chicago</h1>
+  <header class="container-x pt-10 pb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">
+          Brand Gallery
+        </p>
+        <h1 class="luxe-chrome-text text-3xl sm:text-4xl">FCB Chicago</h1>
+      </div>
+      <div class="flex justify-end">
+        <a href="brands.html" class="btn">← Back to Brands</a>
+      </div>
     </div>
-    <a href="brands.html" class="btn">← Back to Brands</a>
-  </div>
+    <p class="subtitle mt-4">
+      Email and web work for <strong>FCB Chicago</strong>, including <strong>Toyota Financial Services</strong> —
+      recommendation engines, dynamic content, and survey-driven lease-renewal flows. Gallery-only view, no overlays.
+    </p>
+  </header>
 
-  <p class="text-gray-300 text-sm max-w-2xl mt-4">
-    Email and web work for FCB Chicago, including Toyota Financial Services lease renewal creative —
-    recommendation engines, dynamic email content, and flows tuned from survey insights.
-    Combined tests delivered up to <strong>+14% lift in conversion</strong> and
-    <strong>+$1.4M in incremental revenue</strong>.
-  </p>
-</header>
+  <main class="container-x pb-14">
+    <section class="border-t border-[#1e1e1e] pt-8">
+      <div class="brand-grid">
 
-<main class="container-x pb-14">
-  <section class="pt-8 border-t border-[#1e1e1e]">
-    <div class="brand-grid">
-
-      <!-- PACCAR / Dynamic content email (tablet) -->
-      <div class="proj-card">
-        <div class="device device-ipad">
-          <div class="screen">
-            <img src="https://i.imgur.com/8DPdaI9.jpeg" alt="Dynamic content email – FCB Chicago">
+        <!-- Card 1: Recommendation engines – iPad -->
+        <div class="proj-card">
+          <div class="device device-ipad">
+            <div class="screen">
+              <img src="https://i.imgur.com/8DPdaI9.jpeg" alt="FCB Chicago dynamic recommendation engine email">
+            </div>
+          </div>
+          <div class="caption">
+            <p><strong>Use case:</strong> Recommendation engines and dynamic email modules tested across segments.</p>
+            <p class="stats mt-1">
+              Conversions <strong>+14%</strong> · Incremental revenue <strong>+$610K</strong>
+            </p>
           </div>
         </div>
-        <p class="text-sm text-gray-300 mt-3">
-          Dynamic email creative using recommendation engines and modular content.
-          Testing the modules and content logic drove about a
-          <strong>+14% lift in conversion</strong> and roughly <strong>+$610K in incremental revenue</strong>
-          across campaigns.
-        </p>
-      </div>
 
-      <!-- Toyota Financial Services lease renewal (desktop) -->
-      <div class="proj-card">
-        <div class="device device-browser">
-          <div class="chrome">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <!-- Card 2: Toyota FS lease renewal – desktop -->
+        <div class="proj-card">
+          <div class="device device-browser">
+            <div class="chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="screen">
+              <img src="https://i.imgur.com/hV16yVB.jpeg" alt="Toyota Financial Services lease renewal survey web layout">
+            </div>
           </div>
-          <div class="screen">
-            <img src="https://i.imgur.com/hV16yVB.jpeg" alt="Toyota Financial Services lease renewal web layout">
+          <div class="caption">
+            <p>
+              <strong>Toyota Financial Services</strong> lease-renewal flow, re-written from survey insights to address
+              top points of confusion and abandonment.
+            </p>
+            <p class="stats mt-1">
+              Conversions <strong>+11%</strong> · Incremental revenue <strong>+$1.4M</strong>
+            </p>
           </div>
         </div>
-        <p class="text-sm text-gray-300 mt-3">
-          Desktop web layout for Toyota Financial Services lease renewal.
-          Pre-work surveys surfaced points of confusion; simplifying copy and flow
-          delivered about an <strong>+11% lift in conversion</strong> and
-          <strong>+$1.4M in incremental revenue</strong> from renewals.
-        </p>
+
       </div>
+    </section>
+  </main>
 
-    </div>
-  </section>
-</main>
-
-<footer class="text-center text-xs text-gray-500 pb-8">
-  © 2025 Judith C. L. Morris
-</footer>
+  <footer class="text-center text-xs text-gray-500 pb-8">
+    © 2025 Judith C. L. Morris
+  </footer>
 
 </body>
 </html>
