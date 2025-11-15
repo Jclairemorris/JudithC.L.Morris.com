@@ -1,252 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campaign Galleries – Brands | Judith C. L. Morris</title>
-
-  <!-- Fonts + Tailwind -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    :root{
-      --gold:#D4AF37;
-      --ink:#050509;
-      --card:#111;
-      --line:#171717;
-    }
-    html,body{
-      background:radial-gradient(circle at top,#1c1023 0,#050509 50%,#020308 100%);
-      color:#f3f4f6;
-      scroll-behavior:smooth;
-    }
-    .container-x{width:min(1140px,92vw);margin-inline:auto}
-    .font-inter{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
-
-    .luxe-chrome-text{
-      font-family:'Cinzel Decorative',serif;
-      background:linear-gradient(180deg,#f7f7f7 0%,#e7cf86 15%,#b88a2a 35%,#f4e7b2 50%,#9a6a12 65%,#f6f2da 82%,#7a5310 100%);
-      -webkit-background-clip:text;
-      background-clip:text;
-      -webkit-text-fill-color:transparent;
-      text-shadow:0 1px 0 rgba(255,255,255,.22),0 2px 8px rgba(0,0,0,.45);
-      letter-spacing:-.02em;
-    }
-
-    .btn{
-      display:inline-block;
-      border:1px solid rgba(255,255,255,.25);
-      padding:.8rem 1.4rem;
-      border-radius:999px;
-      font-weight:600;
-      text-transform:uppercase;
-      font-size:.72rem;
-      letter-spacing:.24em;
-      transition:.3s;
-      color:#f3f4f6;
-    }
-    .btn:hover{background:var(--gold);color:#000;border-color:var(--gold)}
-
-    /* Device frames (gold trim) */
-    .device{position:relative;display:inline-block;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
-    .device .screen{background:#111;overflow:hidden;width:100%;height:100%;border-radius:inherit;border:1px solid #e5e7eb}
-    .device-iphone{border:4px solid var(--gold);border-radius:28px;width:220px;height:440px;background:#0f0f0f;box-shadow:0 10px 40px rgba(0,0,0,.7)}
-    .device-iphone .notch{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:56px;height:12px;background:#0f0f0f;border-radius:8px;z-index:2;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-    .device-ipad{border:6px solid var(--gold);border-radius:18px;width:320px;height:440px;background:#0f0f0f;box-shadow:0 10px 40px rgba(0,0,0,.7)}
-    .device-browser{width:360px;border:2px solid var(--gold);border-radius:16px;background:#0f0f10;box-shadow:0 18px 50px rgba(0,0,0,.8)}
-    .device-browser .chrome{height:34px;background:linear-gradient(180deg,#f5f5f5,#dedede);border-bottom:1px solid var(--gold);border-radius:16px 16px 0 0;display:flex;align-items:center;gap:8px;padding:0 12px}
-    .dot{width:9px;height:9px;border-radius:50%;background:#9ca3af}
-    .device-browser .screen{height:420px;border-radius:0 0 16px 16px}
-
-    .screen img{display:block;width:100%;height:100%;object-fit:cover}
-
-    /* Cards */
-    .brand-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:32px;
-      justify-items:center;
-      align-items:stretch;
-    }
-    .proj-card{
-      position:relative;
-      display:flex;
-      flex-direction:column;
-      gap:18px;
-      justify-content:flex-start;
-      align-items:center;
-      padding:22px 20px 24px;
-      border-radius:24px;
-      background:radial-gradient(circle at top,#181221,#050509 60%);
-      border:1px solid rgba(255,255,255,.05);
-      box-shadow:0 14px 50px rgba(0,0,0,.8);
-      transition:box-shadow .4s,border-color .4s,transform .4s cubic-bezier(.2,.8,.2,1);
-      max-width:420px;
-    }
-    .proj-card:hover{
-      transform:translateY(-4px);
-      box-shadow:0 24px 70px rgba(212,175,55,.35);
-      border-color:rgba(212,175,55,.6);
-    }
-
-    .brand-label{
-      font-size:.7rem;
-      letter-spacing:.28em;
-      text-transform:uppercase;
-      color:#9ca3af;
-    }
-    .brand-title{
-      font-family:'Cinzel Decorative',serif;
-      font-size:1.2rem;
-      letter-spacing:.08em;
-    }
-    .brand-copy{
-      font-size:.85rem;
-      color:#d1d5db;
-      max-width:320px;
-      margin-inline:auto;
-    }
-  </style>
-</head>
-<body class="font-inter">
-
-  <!-- Top bar with back to portfolio -->
-  <header class="container-x pt-10 pb-6">
-    <div class="flex items-center justify-between gap-4 flex-wrap">
-      <div>
-        <p class="text-xs tracking-[0.28em] uppercase text-gray-400 mb-2">
-          Campaign Galleries
-        </p>
-        <h1 class="luxe-chrome-text text-3xl sm:text-4xl">Brands</h1>
-        <p class="text-sm sm:text-base text-gray-300 max-w-xl mt-3">
-          Tap a brand to open its gallery-only view. Each gallery uses the same white-device,
-          gold-trim frames as your main portfolio — no overlays, just clean visuals.
-        </p>
-      </div>
-      <div class="flex justify-end">
-        <a href="portfolio.html" class="btn">← Back to Portfolio</a>
-      </div>
+<!-- ROGERS -->
+<div class="proj-card accent-rogers">
+  <div class="device device-iphone">
+    <div class="notch"></div>
+    <div class="screen">
+      <img src="https://i.imgur.com/MV9lgHa.png" alt="Roger’s Enterprises Black Friday">
     </div>
-  </header>
+  </div>
+  <div class="text-center">
+    <div class="brand-label">Retail • Jewelry</div>
+    <div class="brand-title mt-1">Roger’s Enterprises</div>
+    <p class="brand-copy mt-2">
+      Early Black Friday “today only” pushes and abandoned cart continuity across channels.
+    </p>
+  </div>
+  <a href="brand-rogers.html" class="btn mt-2">View Full Gallery →</a>
+</div>
 
-  <!-- Brand cards -->
-  <main class="container-x pb-16">
-    <section class="border-t border-[#1e1e1e] pt-10">
-      <div class="brand-grid">
+<!-- VICTORIA'S SECRET -->
+<div class="proj-card accent-vs">
+  <div class="device device-iphone">
+    <div class="notch"></div>
+    <div class="screen">
+      <img src="https://i.imgur.com/AZfRJCj.jpeg" alt="Victoria's Secret creative">
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="brand-label">Retail • Intimates</div>
+    <div class="brand-title mt-1">Victoria’s Secret</div>
+    <p class="brand-copy mt-2">
+      Semi-Annual Sale journeys across mobile, web, and email.
+    </p>
+  </div>
+  <a href="brand-vs.html" class="btn mt-2">View Full Gallery →</a>
+</div>
 
-        <!-- Roger’s Enterprises -->
-        <div class="proj-card">
-          <div class="device device-browser">
-            <div class="chrome">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-            </div>
-            <div class="screen">
-              <img src="https://i.imgur.com/iJlPGrV.png" alt="Roger’s Enterprises Early Black Friday desktop hero">
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="brand-label">Retail · Jewelry</div>
-            <div class="brand-title mt-1">Roger’s Enterprises</div>
-            <p class="brand-copy mt-2">
-              Early Black Friday “today only” pushes and abandoned cart flows across email, SMS, mobile, and web.
-            </p>
-          </div>
-          <a href="brand-rogers.html" class="btn mt-2">
-            View Full Gallery →
-          </a>
-        </div>
+<!-- FCB CHICAGO -->
+<div class="proj-card accent-fcb">
+  <div class="device device-ipad">
+    <div class="screen">
+      <img src="https://i.imgur.com/8DPdaI9.jpeg" alt="FCB Chicago dynamic content creative">
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="brand-label">Agency • Automotive & Retail</div>
+    <div class="brand-title mt-1">FCB Chicago / Toyota FS</div>
+    <p class="brand-copy mt-2">
+      Recommendation engines and dynamic content tuned from survey insights.
+    </p>
+  </div>
+  <a href="fcb-chicago-gallery.html" class="btn mt-2">View Full Gallery →</a>
+</div>
 
-        <!-- Victoria’s Secret -->
-        <div class="proj-card">
-          <div class="device device-iphone">
-            <div class="notch"></div>
-            <div class="screen">
-              <img src="https://i.imgur.com/AZfRJCj.jpeg" alt="Victoria’s Secret semi-annual sale iPhone creative">
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="brand-label">Retail · Intimates</div>
-            <div class="brand-title mt-1">Victoria’s Secret</div>
-            <p class="brand-copy mt-2">
-              Semi-Annual Sale journeys across email, app, and landing page — built mobile-first for conversion.
-            </p>
-          </div>
-          <a href="brand-vs.html" class="btn mt-2">
-            View Full Gallery →
-          </a>
-        </div>
+<!-- CRAIN'S CHICAGO BUSINESS -->
+<div class="proj-card accent-crains">
+  <div class="device device-iphone">
+    <div class="notch"></div>
+    <div class="screen">
+      <img src="https://i.imgur.com/hSYKbmf.png" alt="Crain’s Chicago Business layout">
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="brand-label">Publishing • B2B</div>
+    <div class="brand-title mt-1">Crain’s Chicago Business</div>
+    <p class="brand-copy mt-2">
+      Editorial campaigns across mobile and web.
+    </p>
+  </div>
+  <a href="brand-crains.html" class="btn mt-2">View Full Gallery →</a>
+</div>
 
-        <!-- FCB Chicago / Toyota FS -->
-        <div class="proj-card">
-          <div class="device device-ipad">
-            <div class="screen">
-              <img src="https://i.imgur.com/8DPdaI9.jpeg" alt="FCB Chicago dynamic content creative">
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="brand-label">Agency · Automotive & Retail</div>
-            <div class="brand-title mt-1">FCB Chicago / Toyota FS</div>
-            <p class="brand-copy mt-2">
-              Recommendation engines, dynamic email content, and lease-renewal flows tuned from survey insights.
-            </p>
-          </div>
-          <a href="fcb-chicago-gallery.html" class="btn mt-2">
-            View Full Gallery →
-          </a>
-        </div>
-
-        <!-- Crain’s Chicago Business -->
-        <div class="proj-card">
-          <div class="device device-iphone">
-            <div class="notch"></div>
-            <div class="screen">
-              <img src="https://i.imgur.com/hSYKbmf.png" alt="Crain’s Chicago Business People on the Move layout">
-            </div>
-          </div>
-          <div class="text-center">
-            <div class="brand-label">Publishing · B2B</div>
-            <div class="brand-title mt-1">Crain’s Chicago Business</div>
-            <p class="brand-copy mt-2">
-              People on the Move, newsletter, and homepage placements aligned to premium ad inventory and lead flow.
-            </p>
-          </div>
-          <a href="brand-crains.html" class="btn mt-2">
-            View Full Gallery →
-          </a>
-        </div>
-
-        <!-- Chicago Sun-Times -->
-        <div class="proj-card">
-          <div class="device device-macbook">
-            <div class="lid">
-              <div class="screen">
-                <img src="https://i.imgur.com/muc7Gl2.jpeg" alt="Chicago Sun-Times homepage and paywall layout">
-              </div>
-            </div>
-            <div class="base">
-              <div class="keyboard"></div>
-            </div>
-          </div>
-          <div class="text-center mt-2">
-            <div class="brand-label">Publishing · Subscription</div>
-            <div class="brand-title mt-1">Chicago Sun-Times</div>
-            <p class="brand-copy mt-2">
-              Paywall, homepage, and mobile flows optimized around “Most Popular” and simplified plan selection.
-            </p>
-          </div>
-          <a href="brand-suntimes.html" class="btn mt-2">
-            View Full Gallery →
-          </a>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="text-center text-xs text-gray-500 pb-8">
-    © 2025 Judith C. L. Morris
-  </footer>
-
-</body>
-</html>
+<!-- CHICAGO SUN-TIMES -->
+<div class="proj-card accent-suntimes">
+  <div class="device device-browser">
+    <div class="chrome">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+    <div class="screen">
+      <img src="https://i.imgur.com/zSY8LrY.jpeg" alt="Chicago Sun-Times email">
+    </div>
+  </div>
+  <div class="text-center">
+    <div class="brand-label">Publishing</div>
+    <div class="brand-title mt-1">Chicago Sun-Times</div>
+    <p class="brand-copy mt-2">
+      Audience development and city-book email campaigns.
+    </p>
+  </div>
+  <a href="brand-suntimes.html" class="btn mt-2">View Full Gallery →</a>
+</div>
