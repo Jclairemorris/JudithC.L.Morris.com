@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victoria’s Secret · Brand Gallery</title>
+  <title>Victoria’s Secret · Brand Gallery | Judith C. L. Morris</title>
 
+  <!-- Fonts + Tailwind -->
   <link
     href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;700&display=swap"
     rel="stylesheet"
@@ -12,93 +13,131 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root { --gold:#D4AF37; }
-
-    body{
-      margin:0;
-      padding:0;
-      color:#f9fafb;
-      font-family:Inter, sans-serif;
-      background:radial-gradient(circle at top,#221650 0,#050320 55%,#050509 100%);
+    :root {
+      --gold: #D4AF37;
+      --ink: #050509;
     }
 
-    .back-btn{
-      border:1px solid rgba(255,255,255,.85);
-      padding:.55rem 1.7rem;
-      border-radius:999px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:.75rem;
-      font-weight:600;
-      transition:0.2s;
-    }
-    .back-btn:hover{
-      background:var(--gold);
-      color:#000;
-      border-color:var(--gold);
+    html, body {
+      min-height: 100%;
     }
 
-    .device-card{
-      background:radial-gradient(circle at top,#1e133f 0,#080418 55%,#050309 100%);
-      border:1px solid rgba(212,175,55,.75);
-      border-radius:1.7rem;
-      padding:1.75rem;
-      box-shadow:0 25px 55px rgba(0,0,0,.65);
+    body {
+      margin: 0;
+      padding: 0;
+      color: #f9fafb;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #221650 0, #050320 55%, #050509 100%);
     }
 
-    .device-bar{
-      text-transform:uppercase;
-      font-size:.7rem;
-      letter-spacing:.2em;
-      padding:.5rem 1rem;
-      border-radius:999px;
-      border:1px solid rgba(212,175,55,.7);
-      display:inline-block;
-      background:rgba(212,175,55,.12);
-      margin-bottom:1rem;
+    .luxe-chrome-text {
+      font-family: "Cinzel Decorative", serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      background: linear-gradient(
+        120deg,
+        #fef7d0 0%,
+        #f5d793 25%,
+        #f1b74f 50%,
+        #f7e2a9 75%,
+        #fefbf0 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 14px rgba(0, 0, 0, 0.75);
     }
 
-    .frame{
-      border:1px solid rgba(212,175,55,.7);
-      border-radius:1.25rem;
-      padding:.35rem;
-      background:radial-gradient(circle at top,#43318b 0,#05030f 60%);
+    .back-btn {
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      padding: 0.55rem 1.7rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: 0.2s;
+      text-decoration: none;
+      color: #f9fafb;
+      display: inline-block;
     }
 
-    .img{
-      width:100%;
-      border-radius:1rem;
-      display:block;
-      object-fit:cover;
+    .back-btn:hover {
+      background: var(--gold);
+      color: #000;
+      border-color: var(--gold);
+    }
+
+    .device-card {
+      background: radial-gradient(circle at top, #1e133f 0, #080418 55%, #050309 100%);
+      border: 1px solid rgba(212, 175, 55, 0.75);
+      border-radius: 1.7rem;
+      padding: 1.75rem;
+      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+    }
+
+    .device-bar {
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.12);
+      margin-bottom: 1rem;
+      color: #e5e7eb;
+    }
+
+    .frame {
+      border: 1px solid rgba(212, 175, 55, 0.7);
+      border-radius: 1.25rem;
+      padding: 0.35rem;
+      background: radial-gradient(circle at top, #43318b 0, #05030f 60%);
+    }
+
+    .img {
+      width: 100%;
+      border-radius: 1rem;
+      display: block;
+      object-fit: cover;
     }
   </style>
 </head>
 
 <body>
   <main class="max-w-6xl mx-auto px-6 pt-12 pb-20">
-
-    <div class="flex justify-between items-start mb-10">
+    <!-- Header + Back to Brands -->
+    <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-10">
       <div>
         <p class="uppercase tracking-widest text-gray-300 text-xs">Brand Gallery</p>
-        <h1 class="text-4xl luxe-chrome-text">Victoria’s Secret</h1>
-        <p class="mt-4 text-gray-300 max-w-xl leading-relaxed">
+        <h1 class="luxe-chrome-text text-3xl sm:text-4xl mt-3">Victoria’s Secret</h1>
+        <p class="mt-4 text-gray-300 max-w-xl leading-relaxed text-sm sm:text-base">
           Semi-annual sale journeys spanning email, social, app and landing pages.
           Mobile-first creative, thumb-stopping imagery, and promotional framing
-          designed to lift conversion.
+          designed to lift click-through and conversion.
         </p>
       </div>
 
-      <a href="brandsgallery.html#vs" class="back-btn">← Back to Brands</a>
+      <div class="md:pt-2">
+        <a href="brandsgallery.html#vs" class="back-btn">← Back to Brands</a>
+      </div>
     </div>
 
-    <!-- DEVICE GRID -->
+    <!-- Device grid -->
     <section class="grid md:grid-cols-3 gap-8">
-
       <!-- PHONE -->
       <article class="device-card">
         <div class="device-bar">Mobile Social Feed · Phone</div>
         <div class="frame">
-          <img src="vs-hero.jpg" class="img" alt="Victoria’s Secret mobile feed" />
+          <!-- PHONE IMAGE -->
+          <img
+            src="vs-hero.jpg"
+            class="img"
+            alt="Victoria’s Secret mobile social feed creative on phone"
+          />
         </div>
       </article>
 
@@ -106,21 +145,32 @@
       <article class="device-card">
         <div class="device-bar">Promo Email Layout · Tablet</div>
         <div class="frame">
-          <img src="vs-tablet.jpg" class="img" alt="Victoria’s Secret tablet layout" />
+          <!-- TABLET IMAGE -->
+          <img
+            src="vs-tablet.jpg"
+            class="img"
+            alt="Victoria’s Secret semi-annual sale promo email layout on tablet"
+          />
         </div>
       </article>
 
-      <!-- LAPTOP -->
+      <!-- DESKTOP -->
       <article class="device-card">
         <div class="device-bar">Landing Page Hero · Desktop</div>
         <div class="frame">
-          <img src="vs-desktop.jpg" class="img" alt="Victoria’s Secret desktop hero" />
+          <!-- DESKTOP / MACBOOK IMAGE -->
+          <img
+            src="vs-desktop.jpg"
+            class="img"
+            alt="Victoria’s Secret semi-annual sale landing page hero on desktop"
+          />
         </div>
       </article>
-
     </section>
 
-    <footer class="text-xs text-gray-500 mt-10">© 2025 Judith C. L. Morris</footer>
+    <footer class="text-xs text-gray-500 mt-10">
+      © 2025 Judith C. L. Morris
+    </footer>
   </main>
 </body>
 </html>
