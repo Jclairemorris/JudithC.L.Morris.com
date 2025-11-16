@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Victoria’s Secret · Brand Gallery</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;700&display=swap"
+    rel="stylesheet"
+  />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root { --gold:#D4AF37; }
 
-    body{
+    body {
       margin:0;
       padding:0;
       color:#f9fafb;
-      font-family:Inter, sans-serif;
+      font-family:Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:#050320;
+    }
+
+    .luxe-chrome-text{
+      font-family:'Cinzel Decorative', serif;
+      font-weight:700;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      background:linear-gradient(120deg,#fef7d0 0%,#f5d793 25%,#f1b74f 50%,#f7e2a9 75%,#fefbf0 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      text-shadow:0 0 14px rgba(0,0,0,.75);
     }
 
     .back-btn{
@@ -28,6 +43,8 @@
       font-size:.75rem;
       font-weight:600;
       transition:0.2s;
+      text-decoration:none;
+      color:#f9fafb;
     }
     .back-btn:hover{
       background:var(--gold);
@@ -35,29 +52,50 @@
       border-color:var(--gold);
     }
 
-    .device-shell {
-      background:#111;
-      border:2px solid var(--gold);
-      border-radius:22px;
-      padding:10px;
-      max-width:380px;
-      margin:auto;
-    }
-
-    .device-img {
-      width:100%;
-      border-radius:16px;
-      display:block;
+    /* MATCHES FCB-STYLE DEVICE CARDS */
+    .device-card {
+      background:#050509;
+      border-radius:30px;
+      border:1px solid rgba(212,175,55,.9);
+      padding:28px 22px 26px;
+      box-shadow:0 26px 60px rgba(0,0,0,.8);
     }
 
     .device-label {
       text-transform:uppercase;
-      letter-spacing:.18em;
-      font-size:.65rem;
-      color:#d4af37;
-      margin-bottom:.75rem;
-      text-align:center;
+      letter-spacing:.2em;
+      font-size:.7rem;
+      color:#d1d5db;
+      margin-bottom:1rem;
+      text-align:left;
       font-weight:600;
+    }
+
+    .device-shell {
+      background:#111;
+      border-radius:24px;
+      padding:12px;
+      border:1px solid rgba(255,255,255,.15);
+    }
+
+    .device-inner-white {
+      background:#f9fafb;
+      border-radius:18px;
+      padding:4px;
+    }
+
+    .device-img {
+      width:100%;
+      display:block;
+      border-radius:14px;
+      object-fit:cover;
+    }
+
+    footer {
+      font-size:.7rem;
+      color:#6b7280;
+      margin-top:3rem;
+      text-align:left;
     }
   </style>
 </head>
@@ -65,49 +103,57 @@
 <body>
   <main class="max-w-7xl mx-auto px-6 pt-12 pb-20">
 
-    <div class="flex justify-between items-start mb-12">
+    <!-- HEADER + BACK BUTTON -->
+    <div class="flex justify-between items-start mb-12 gap-6">
       <div>
         <p class="uppercase tracking-widest text-gray-300 text-xs">Brand Gallery</p>
-        <h1 class="text-4xl luxe-chrome-text">Victoria’s Secret</h1>
-        <p class="mt-4 text-gray-300 max-w-xl leading-relaxed">
+        <h1 class="text-3xl sm:text-4xl luxe-chrome-text mt-2">Victoria’s Secret</h1>
+        <p class="mt-4 text-gray-300 max-w-xl leading-relaxed text-sm sm:text-base">
           Semi-annual sale journeys spanning email, social, app and landing pages.
-          Mobile-first creative, thumb-stopping imagery, and promotional framing designed to lift click-through and conversion.
+          Mobile-first creative, thumb-stopping imagery, and clear promotional framing
+          designed to lift click-through and conversion.
         </p>
       </div>
 
       <a href="brandsgallery.html#vs" class="back-btn">← Back to Brands</a>
     </div>
 
-    <!-- 3-DEVICE GRID MATCHING FCB LAYOUT -->
-    <section class="grid md:grid-cols-3 gap-12">
+    <!-- THREE DEVICES – SAME STRUCTURE AS FCB -->
+    <section class="grid md:grid-cols-3 gap-10">
 
       <!-- PHONE -->
-      <div>
+      <article class="device-card">
         <div class="device-label">Mobile Social Feed · Phone</div>
         <div class="device-shell">
-          <img src="vs-hero.jpg" class="device-img" alt="Victoria’s Secret mobile phone feed" />
+          <div class="device-inner-white">
+            <img src="vs-hero.jpg" alt="Victoria’s Secret mobile social feed" class="device-img" />
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- TABLET -->
-      <div>
+      <article class="device-card">
         <div class="device-label">Promo Email Layout · Tablet</div>
         <div class="device-shell">
-          <img src="vs-tablet.jpg" class="device-img" alt="Victoria’s Secret email tablet layout" />
+          <div class="device-inner-white">
+            <img src="vs-tablet.jpg" alt="Victoria’s Secret semi-annual sale email layout on tablet" class="device-img" />
+          </div>
         </div>
-      </div>
+      </article>
 
       <!-- DESKTOP -->
-      <div>
+      <article class="device-card">
         <div class="device-label">Landing Page Hero · Desktop</div>
         <div class="device-shell">
-          <img src="vs-desktop.jpg" class="device-img" alt="Victoria’s Secret desktop hero" />
+          <div class="device-inner-white">
+            <img src="vs-desktop.jpg" alt="Victoria’s Secret semi-annual sale landing page hero" class="device-img" />
+          </div>
         </div>
-      </div>
+      </article>
 
     </section>
 
-    <footer class="text-xs text-gray-500 mt-16">© 2025 Judith C. L. Morris</footer>
+    <footer>© 2025 Judith C. L. Morris</footer>
   </main>
 </body>
 </html>
