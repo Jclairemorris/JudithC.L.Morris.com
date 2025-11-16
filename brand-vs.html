@@ -62,47 +62,87 @@
       text-decoration: none;
       color: #f9fafb;
       display: inline-block;
+      white-space: nowrap;
     }
-
     .back-btn:hover {
       background: var(--gold);
       color: #000;
       border-color: var(--gold);
     }
 
+    /* Card holding each device */
     .device-card {
       background: radial-gradient(circle at top, #1e133f 0, #080418 55%, #050309 100%);
-      border: 1px solid rgba(212, 175, 55, 0.75);
-      border-radius: 1.7rem;
-      padding: 1.75rem;
-      box-shadow: 0 25px 55px rgba(0, 0, 0, 0.65);
+      border-radius: 1.8rem;
+      padding: 1.9rem 1.7rem 2.1rem;
+      border: 1px solid rgba(212, 175, 55, 0.8);
+      box-shadow: 0 26px 58px rgba(0, 0, 0, 0.75);
     }
 
-    .device-bar {
+    .device-label {
       text-transform: uppercase;
       font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      padding: 0.5rem 1rem;
+      letter-spacing: 0.22em;
+      padding: 0.5rem 1.25rem;
       border-radius: 999px;
-      border: 1px solid rgba(212, 175, 55, 0.7);
+      border: 1px solid rgba(212, 175, 55, 0.9);
       display: inline-block;
-      background: rgba(212, 175, 55, 0.12);
-      margin-bottom: 1rem;
+      background: rgba(5, 3, 20, 0.7);
       color: #e5e7eb;
+      margin-bottom: 1.2rem;
     }
 
-    .frame {
-      border: 1px solid rgba(212, 175, 55, 0.7);
-      border-radius: 1.25rem;
-      padding: 0.35rem;
-      background: radial-gradient(circle at top, #43318b 0, #05030f 60%);
+    /* White device shell with gold trim */
+    .device-shell {
+      position: relative;
+      border-radius: 1.6rem;
+      padding: 0.75rem;
+      background: #f9fafb;
+      border: 2px solid var(--gold);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
     }
 
-    .img {
+    .device-shell.phone {
+      border-radius: 2.3rem;
+      padding: 0.9rem;
+    }
+
+    .device-shell.desktop {
+      border-radius: 1.3rem;
+      padding: 0.6rem 0.6rem 1.3rem;
+    }
+
+    .device-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0.4rem;
+      border-radius: inherit;
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      pointer-events: none;
+    }
+
+    /* “Notch” for the phone */
+    .phone-notch {
+      position: absolute;
+      top: 0.55rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 34%;
+      height: 0.35rem;
+      border-radius: 999px;
+      background: #d1d5db;
+    }
+
+    .device-img {
       width: 100%;
-      border-radius: 1rem;
       display: block;
+      border-radius: 1.2rem;
       object-fit: cover;
+      background: #000;
+    }
+
+    .device-shell.desktop .device-img {
+      border-radius: 0.85rem;
     }
   </style>
 </head>
@@ -122,50 +162,51 @@
       </div>
 
       <div class="md:pt-2">
+        <!-- IMPORTANT: back to your brands gallery VS tile -->
         <a href="brandsgallery.html#vs" class="back-btn">← Back to Brands</a>
       </div>
     </div>
 
-    <!-- Device grid -->
+    <!-- Device grid: PHONE · TABLET · DESKTOP -->
     <section class="grid md:grid-cols-3 gap-8">
-      <!-- PHONE -->
+
+      <!-- PHONE (white iPhone shell with gold trim) -->
       <article class="device-card">
-        <div class="device-bar">Mobile Social Feed · Phone</div>
-        <div class="frame">
-          <!-- PHONE IMAGE -->
+        <div class="device-label">Mobile Social Feed · Phone</div>
+        <div class="device-shell phone">
+          <div class="phone-notch"></div>
           <img
             src="vs-hero.jpg"
-            class="img"
             alt="Victoria’s Secret mobile social feed creative on phone"
+            class="device-img"
           />
         </div>
       </article>
 
       <!-- TABLET -->
       <article class="device-card">
-        <div class="device-bar">Promo Email Layout · Tablet</div>
-        <div class="frame">
-          <!-- TABLET IMAGE -->
+        <div class="device-label">Promo Email Layout · Tablet</div>
+        <div class="device-shell">
           <img
             src="vs-tablet.jpg"
-            class="img"
-            alt="Victoria’s Secret semi-annual sale promo email layout on tablet"
+            alt="Victoria’s Secret semi-annual sale promo email on tablet"
+            class="device-img"
           />
         </div>
       </article>
 
-      <!-- DESKTOP -->
+      <!-- DESKTOP / MACBOOK (white device with gold trim) -->
       <article class="device-card">
-        <div class="device-bar">Landing Page Hero · Desktop</div>
-        <div class="frame">
-          <!-- DESKTOP / MACBOOK IMAGE -->
+        <div class="device-label">Landing Page Hero · Desktop</div>
+        <div class="device-shell desktop">
           <img
             src="vs-desktop.jpg"
-            class="img"
             alt="Victoria’s Secret semi-annual sale landing page hero on desktop"
+            class="device-img"
           />
         </div>
       </article>
+
     </section>
 
     <footer class="text-xs text-gray-500 mt-10">
