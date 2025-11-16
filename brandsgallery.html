@@ -3,323 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- SEO -->
-  <title>CRM & Creative Campaign Brands | Judith C. L. Morris Portfolio</title>
-  <meta
-    name="description"
-    content="Browse campaign brands Judith C. L. Morris has designed for, including Victoria’s Secret, Crain’s Chicago Business, Chicago Sun-Times, Toyota Financial Services, Meta, and more. View device previews, full galleries, and case studies."
-  />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="CRM & Creative Campaign Brands | Judith C. L. Morris" />
-  <meta
-    property="og:description"
-    content="High-converting CRM, email, and cross-device campaigns for retail, publishing, automotive, financial services, and big tech."
-  />
-  <meta property="og:type" content="website" />
-  <!-- You can swap this placeholder image later -->
-  <meta property="og:image" content="https://i.imgur.com/ZUsH68O.jpeg" />
-  <meta property="og:site_name" content="Judith C. L. Morris Portfolio" />
+  <title>Campaign Brands & Device Previews | Judith C. L. Morris</title>
 
   <!-- Fonts + Tailwind -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     :root {
-      --gold: #d4af37;
-      --ink: #050316;
+      --gold:#D4AF37;
+      --ink:#050509;
+      --card:#11111a;
+      --eggplant:#130a30;
     }
+
     body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
-        "Segoe UI Emoji";
-      background: radial-gradient(circle at top, #2f1f93 0, #050316 55%);
-      color: #e5e7eb;
+      margin:0;
+      min-height:100vh;
+      background: radial-gradient(circle at top, #2b1f80 0, #0a0618 45%, #000 100%);
+      color:#f9fafb;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      scroll-behavior:smooth;
     }
-    .container-x {
-      width: min(1140px, 92vw);
-      margin-inline: auto;
+
+    .luxe-chrome-text{
+      font-family:'Cinzel Decorative',serif;
+      background:linear-gradient(120deg,#ffefba 0%,#f5c76b 30%,#d8a63b 55%,#f7e9c5 80%,#b07b2c 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 0 7px rgba(0,0,0,.55);
     }
-    .luxe-heading {
-      font-family: "Cinzel Decorative", serif;
-      background: linear-gradient(
-        180deg,
-        #fdf7e3 0%,
-        #f4d88a 20%,
-        #b7871f 45%,
-        #f3e7b5 60%,
-        #8b5c12 85%,
-        #fdf7e3 100%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.22),
-        0 6px 24px rgba(0, 0, 0, 0.55);
-      letter-spacing: -0.03em;
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:.75rem 1.7rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.25);
+      font-size:.75rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-weight:600;
+      text-decoration:none;
+      transition:.2s;
+      background:rgba(0,0,0,.65);
+      color:#f9fafb;
+    }
+    .btn:hover{
+      background:var(--gold);
+      color:#000;
+      border-color:var(--gold);
+    }
+
+    .section-label{
+      text-transform:uppercase;
+      letter-spacing:.28em;
+      font-size:.7rem;
+      color:#9ca3af;
+    }
+
+    .brand-card{
+      border-radius:1.75rem;
+      background:radial-gradient(circle at top,#1f164f 0,#05030f 65%);
+      border:1px solid rgba(212,175,55,.5);
+      box-shadow:0 22px 70px rgba(0,0,0,.8);
+      padding:1.75rem 1.75rem 1.5rem;
+      display:flex;
+      flex-direction:column;
+      justify-content:flex-start;
+    }
+
+    .brand-img{
+      border-radius:1.25rem;
+      border:1px solid rgba(212,175,55,.85);
+      box-shadow:0 18px 40px rgba(0,0,0,.85);
     }
   </style>
 </head>
+
 <body class="pb-16">
-  <!-- HEADER -->
-  <header class="container-x pt-10 pb-8">
-    <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-4">
-      Portfolio · Brand Overview
-    </p>
-    <h1 class="luxe-heading text-3xl sm:text-4xl mb-4">
-      Campaign brands &amp; device previews
+  <header class="max-w-6xl mx-auto px-4 pt-10 pb-6">
+    <p class="section-label">Portfolio · Brand Overview</p>
+    <h1 class="luxe-chrome-text text-3xl sm:text-4xl md:text-5xl mt-3">
+      Campaign Brands &amp; Device Previews
     </h1>
-    <p class="text-sm sm:text-base text-slate-200 max-w-3xl leading-relaxed">
-      In graduate school, my instructor — then an editor at the
-      <span class="font-semibold">Chicago Tribune</span> — told us:
-      “You’re going to have to learn the tech side and how to advertise on
-      smartphones.” They did not lie. This page is a quick index of the brands
-      and devices I’ve designed for. Click a brand to see the full gallery,
-      then open the detailed case studies for the campaigns that interest you.
+    <p class="text-gray-200 text-sm sm:text-base mt-4 max-w-3xl">
+      In graduate school, my instructor &mdash; then an editor at the
+      <span class="italic">Chicago Tribune</span> &mdash; told us: “You’re going to
+      have to learn the tech side and how to advertise on smartphones.” They did
+      not lie. This page is a quick index of the brands and devices I’ve designed for.
+      Click a brand to see the full gallery, then open the detailed case studies
+      for the campaigns that interest you.
     </p>
   </header>
 
-  <!-- BRAND GRID -->
-  <main class="container-x">
-    <div
-      class="grid gap-6 md:gap-8 md:grid-cols-2 xl:grid-cols-3 auto-rows-fr"
-    >
+  <!-- GRID -->
+  <main class="max-w-6xl mx-auto px-4">
+    <div class="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
+
       <!-- ROGER'S ENTERPRISES -->
-      <a
-        href="brand-rogers.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Retail · Jewelry
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            Roger’s Enterprises
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Early Black Friday, surprise “today only” pushes, abandoned cart
-            flows, and cross-device continuity across email, SMS, mobile, push notification, display ads and
-            web.
-          </p>
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">Retail · Jewelry</p>
+        <h2 class="mt-1 font-semibold text-lg">Roger’s Enterprises</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Early Black Friday, surprise “today only” pushes, abandoned cart flows, and
+          cross-device continuity across email, SMS, mobile, push notification,
+          display ads and web.
+        </p>
+        <a href="brand-rogers.html" class="mt-4 block">
+          <img src="images/rogers-hero.png"
+               alt="Roger’s Enterprises Black Friday campaign"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-rogers.html" class="btn">View Full Gallery →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/iJlPGrV.png"
-            alt="Roger’s Early Black Friday email hero on mobile"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            View full gallery →
-          </span>
-        </div>
-      </a>
+      </article>
 
       <!-- VICTORIA'S SECRET -->
-      <a
-        href="brand-vs.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Retail · Intimates
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            Victoria’s Secret
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Mobile-first semi-annual sale journeys with coordinated email, app, web, display ads and
-            and landing page creative tuned for conversion and AOV.
-          </p>
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">Retail · Intimates</p>
+        <h2 class="mt-1 font-semibold text-lg">Victoria’s Secret</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Mobile-first semi-annual sale journeys with coordinated email, app, web,
+          display ads and landing page creative tuned for conversion and AOV.
+        </p>
+        <a href="brand-vs.html" class="mt-4 block">
+          <!-- NEW IMAGE IMPLEMENTED HERE -->
+          <img src="images/vs-hero.jpg"
+               alt="Victoria’s Secret mobile sale campaign"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-vs.html" class="btn">View Full Gallery →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/AZfRJCj.jpeg"
-            alt="Victoria’s Secret promotional email on a smartphone screen"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            View full gallery →
-          </span>
-        </div>
-      </a>
+      </article>
 
-      <!-- FCB CHICAGO -->
-      <a
-      href="brand-fcb.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Agency · Financial Services
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            FCB Chicago
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Recommendation engines, dynamic content, and survey-driven lease
-            renewal journeys for high-stakes financial decisions.
-          </p>
+      <!-- FCB / PACCAR -->
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">
+          Agency · Financial Services
+        </p>
+        <h2 class="mt-1 font-semibold text-lg">FCB Chicago</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Recommendation engines, dynamic content, and survey-driven lease renewal
+          journeys for high-stakes financial decisions.
+        </p>
+        <a href="brand-fcb.html" class="mt-4 block">
+          <img src="images/fcb-hero.png"
+               alt="PACCAR genuine parts lease renewal campaign"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-fcb.html" class="btn">View Full Gallery →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/8DPdaI9.jpeg"
-            alt="Dynamic FCB Chicago Toyota Financial Services email on laptop"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            View full gallery →
-          </span>
-        </div>
-      </a>
+      </article>
 
       <!-- CRAIN'S CHICAGO BUSINESS -->
-      <a
-        href="brand-crains.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Publishing · B2B
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            Crain’s Chicago Business
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Editorial-grade layouts, “People on the Move” placements, and
-            subscription flows built to respect both journalism and performance.
-          </p>
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">Publishing · B2B</p>
+        <h2 class="mt-1 font-semibold text-lg">Crain’s Chicago Business</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Editorial-grade layouts, “People on the Move” placements, and subscription
+          flows built to respect both journalism and performance.
+        </p>
+        <a href="brand-crains.html" class="mt-4 block">
+          <img src="images/crains-hero.png"
+               alt="Crain’s Chicago Business Lollapalooza creative"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-crains.html" class="btn">View Full Gallery →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/Nlas1si.jpeg"
-            alt="Crain’s Chicago Business newsletter on tablet and phone"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            View full gallery →
-          </span>
-        </div>
-      </a>
+      </article>
 
       <!-- CHICAGO SUN-TIMES -->
-      <a
-        href="brand-suntimes.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Publishing · Consumer
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            Chicago Sun-Times
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Paywall flows, homepage hierarchy, and plan selection experiences
-            tuned for subscription conversion and mission-forward storytelling.
-          </p>
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">
+          Publishing · Consumer
+        </p>
+        <h2 class="mt-1 font-semibold text-lg">Chicago Sun-Times</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Paywall flows, homepage hierarchy, and plan selection experiences tuned for
+          subscription conversion and mission-forward storytelling.
+        </p>
+        <a href="brand-suntimes.html" class="mt-4 block">
+          <img src="images/suntimes-hero.png"
+               alt="Chicago Sun-Times subscription and paywall design"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-suntimes.html" class="btn">View Full Gallery →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/eUkWfLU.jpeg"
-            alt="Chicago Sun-Times paywall and subscription offer on screen"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            View full gallery →
-          </span>
-        </div>
-      </a>
+      </article>
 
-      <!-- META / BIG TECH VAULT -->
-      <a
-      href="brand-meta.html"
-        class="group relative flex flex-col justify-between rounded-3xl border border-slate-700/70 bg-black/40 p-5 sm:p-6 shadow-[0_18px_55px_rgba(0,0,0,0.65)] backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[var(--gold)] hover:shadow-[0_24px_70px_rgba(212,175,55,0.35)]"
-      >
-        <div class="mb-4">
-          <p class="text-[0.65rem] uppercase tracking-[0.3em] text-slate-400">
-            Big Tech · Private Vault
-          </p>
-          <h2 class="mt-1 text-lg font-semibold text-slate-50">
-            Meta, Zynga, Salesforce &amp; more
-          </h2>
-          <p class="mt-2 text-xs text-slate-300">
-            Journey maps, SFMC/Data Cloud architecture, and performance tests
-            that live in a private vault — walk-throughs available for qualified
-            opportunities.
-          </p>
+      <!-- META / ZYNGA / SALESFORCE -->
+      <article class="brand-card">
+        <p class="text-xs uppercase tracking-[.18em] text-gray-400">
+          Big Tech · Private Vault
+        </p>
+        <h2 class="mt-1 font-semibold text-lg">Meta, Zynga, Salesforce &amp; more</h2>
+        <p class="text-gray-200 text-sm mt-2">
+          Journey maps, SFMC/Data Cloud architecture, and performance tests that live
+          in a private vault &mdash; walk-throughs available for qualified opportunities.
+        </p>
+        <a href="brand-meta.html" class="mt-4 block">
+          <!-- you already have this image as image.png -->
+          <img src="image.png"
+               alt="Meta and Zynga CRM private vault illustration"
+               class="w-full brand-img" />
+        </a>
+        <div class="mt-4">
+          <a href="brand-meta.html" class="btn">Request Walkthrough →</a>
         </div>
-        <div
-          class="relative overflow-hidden rounded-2xl border border-[var(--gold)]/70 bg-black/60 aspect-[3/4]"
-        >
-          <img
-            src="https://i.imgur.com/ZUsH68O.jpeg"
-            alt="Portrait of Judith C. L. Morris with UX and CRM visuals"
-            class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-          />
-          <div
-            class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition"
-          ></div>
-          <span
-            class="absolute bottom-3 left-3 rounded-full bg-black/70 px-3 py-1 text-[0.65rem] uppercase tracking-[0.22em] text-slate-100"
-          >
-            Request walkthrough →
-          </span>
-        </div>
-      </a>
+      </article>
+
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="mt-12 border-t border-white/5">
-    <div
-      class="container-x flex flex-col items-center justify-between gap-4 py-6 text-[0.7rem] text-slate-400 sm:flex-row"
-    >
-      <span>© 2025 Judith C. L. Morris · CRM &amp; Automation Storytelling</span>
-      <span class="text-slate-500">
-        Case studies available on request for sensitive work.
-      </span>
-    </div>
+  <footer class="text-center text-xs text-gray-500 mt-16">
+    © 2025 Judith C. L. Morris
   </footer>
 </body>
 </html>
