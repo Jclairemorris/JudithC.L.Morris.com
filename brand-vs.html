@@ -1,188 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Victoria’s Secret Gallery | Judith C. L. Morris</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Victoria's Secret Brand Gallery | Judith C. L. Morris</title>
 
   <!-- Fonts + Tailwind -->
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root{--gold:#D4AF37;--ink:#0a0a0a;--card:#111;--line:#171717}
-    html,body{background:var(--ink);color:#f3f4f6;scroll-behavior:smooth}
-    .container-x{width:min(1140px,92vw);margin-inline:auto}
-    .font-inter{font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji"}
+    :root {
+      --gold:#D4AF37;
+      --ink:#050509;
+      --card:#11111a;
+      --eggplant:#130a30;
+    }
+
+    body{
+      margin:0;
+      min-height:100vh;
+      background:radial-gradient(circle at top,#221652 0,#050309 55%,#000 100%);
+      color:#f9fafb;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      scroll-behavior:smooth;
+    }
 
     .luxe-chrome-text{
       font-family:'Cinzel Decorative',serif;
-      background:linear-gradient(180deg,#f7f7f7 0%,#e7cf86 15%,#b88a2a 35%,#f4e7b2 50%,#9a6a12 65%,#f6f2da 82%,#7a5310 100%);
-      -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-      text-shadow:0 1px 0 rgba(255,255,255,.22),0 2px 8px rgba(0,0,0,.45);letter-spacing:-.02em
+      background:linear-gradient(120deg,#ffefba 0%,#f5c76b 30%,#d8a63b 55%,#f7e9c5 80%,#b07b2c 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 0 7px rgba(0,0,0,.55);
     }
 
     .btn{
-      display:inline-block;
-      border:1px solid rgba(255,255,255,.25);
-      padding:.75rem 1.3rem;
-      border-radius:999px;
-      font-weight:600;
-      text-transform:uppercase;
-      font-size:.8rem;
-      letter-spacing:.16em;
-      transition:.3s;
-      color:#f3f4f6;
-    }
-    .btn:hover{background:var(--gold);color:#000;border-color:var(--gold)}
-
-    /* Devices */
-    .device{position:relative;display:inline-block}
-    .device .screen{overflow:hidden;width:100%;height:100%;border-radius:inherit}
-
-    .device-iphone{
-      border:4px solid var(--gold);
-      border-radius:28px;
-      width:230px;
-      height:460px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.55)
-    }
-    .device-iphone .notch{
-      position:absolute;top:8px;left:50%;transform:translateX(-50%);
-      width:56px;height:12px;background:#0f0f0f;border-radius:8px;
-    }
-
-    .device-ipad{
-      border:6px solid var(--gold);
-      border-radius:18px;
-      width:330px;
-      height:440px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.55)
-    }
-
-    .device-browser{
-      width:min(480px,88vw);
-      border:2px solid var(--gold);
-      border-radius:12px;
-      background:#0f0f10;
-      box-shadow:0 16px 40px rgba(0,0,0,.55);
-    }
-    .device-browser .chrome{
-      height:32px;
-      background:linear-gradient(180deg,#f5f5f5,#e5e5e5);
-      display:flex;
+      display:inline-flex;
       align-items:center;
-      gap:8px;
-      padding:0 12px;
-      border-bottom:1px solid var(--gold);
-      border-radius:12px 12px 0 0;
+      justify-content:center;
+      padding:.65rem 1.5rem;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.25);
+      font-size:.7rem;
+      text-transform:uppercase;
+      letter-spacing:.22em;
+      font-weight:600;
+      text-decoration:none;
+      transition:.18s;
+      background:rgba(0,0,0,.7);
+      color:#f9fafb;
     }
-    .dot{width:10px;height:10px;border-radius:50%;background:#9ca3af}
-    .device-browser .screen{
-      height:260px;
-      border-radius:0 0 12px 12px;
-    }
-
-    .screen img{width:100%;height:100%;object-fit:cover}
-
-    .brand-grid{
-      display:grid;
-      grid-template-columns:repeat(2,minmax(260px,1fr));
-      gap:36px;
-      justify-items:center;
-      align-items:flex-start;
-    }
-    @media(max-width:820px){
-      .brand-grid{grid-template-columns:1fr}
+    .btn:hover{
+      background:var(--gold);
+      color:#000;
+      border-color:var(--gold);
     }
 
-    .proj-card{
-      padding:20px;
-      border-radius:18px;
-      background:var(--card);
-      border:1px solid var(--line);
-      text-align:center;
-      box-shadow:0 12px 44px rgba(0,0,0,.55);
+    .subtitle{
+      max-width:42rem;
+      font-size:.9rem;
+      color:#e5e7eb;
+    }
+
+    .frame-card{
+      border-radius:1.75rem;
+      background:radial-gradient(circle at top,#1e164b 0,#04030c 60%);
+      border:1px solid rgba(212,175,55,.5);
+      box-shadow:0 22px 70px rgba(0,0,0,.85);
+      padding:1.5rem;
+    }
+
+    .hero-img{
+      border-radius:1.35rem;
+      border:1px solid rgba(212,175,55,.85);
+      box-shadow:0 18px 45px rgba(0,0,0,.9);
     }
   </style>
 </head>
-<body class="font-inter">
 
-<header class="container-x pt-10 pb-6">
-  <div class="flex items-center justify-between gap-4 flex-wrap">
-    <div>
-      <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">Brand Gallery</p>
-      <h1 class="luxe-chrome-text text-3xl sm:text-4xl">Victoria’s Secret</h1>
+<body class="pb-16">
+  <header class="max-w-5xl mx-auto px-4 pt-10 pb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
+      <div>
+        <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">
+          Brand Gallery
+        </p>
+        <h1 class="luxe-chrome-text text-3xl sm:text-4xl">
+          Victoria’s Secret
+        </h1>
+      </div>
+
+      <div class="flex justify-end">
+        <!-- BACK TO THE PURPLE BRANDS PAGE -->
+        <a href="brandsgallery.html" class="btn">← Back to Brands</a>
+      </div>
     </div>
-    <a href="portfolio.html#brands" class="btn">← Back to Brands</a>
-  </div>
 
-  <p class="text-gray-300 text-sm max-w-2xl mt-4">
-    Semi-Annual Sale journeys across email, mobile, and desktop —
-    part of a seasonal push that delivered a <strong>+22% lift in sale conversion</strong>
-    and <strong>+15% higher AOV</strong> from mobile-first sequencing.
-  </p>
-</header>
+    <p class="subtitle mt-4">
+      Semi-annual sale journeys spanning email, social, app and landing pages.
+      This campaign focused on mobile-first creative, thumb-stopping imagery,
+      and clear promotional framing to lift click-through and conversion.
+    </p>
+  </header>
 
-<main class="container-x pb-14">
-  <section class="pt-8 border-t border-[#1e1e1e]">
-    <div class="brand-grid">
+  <main class="max-w-5xl mx-auto px-4 mt-4 space-y-10">
 
-      <!-- iPhone Card -->
-      <div class="proj-card">
-        <div class="device device-iphone">
-          <div class="notch"></div>
-          <div class="screen">
-            <img src="https://vs-hero.jpg" alt="VS Semi-Annual Sale mobile email 1">
-          </div>
-        </div>
-        <p class="text-sm text-gray-300 mt-3">
-          Mobile email for Semi-Annual Sale, built to scroll quickly on-the-go.
-          Helped drive the <strong>+22% lift in sale conversion</strong> and
-          <strong>+15% AOV</strong> from a mobile-first sequence.
-        </p>
-      </div>
+    <!-- MAIN DEVICE / HERO -->
+    <section class="frame-card">
+      <h2 class="text-sm uppercase tracking-[.18em] text-gray-400 mb-3">
+        Mobile Feed Creative · Primary Device
+      </h2>
+      <img
+        src="images/vs-hero.jpg"
+        alt="Victoria’s Secret Facebook mobile sale creative"
+        class="w-full hero-img" />
+    </section>
 
-      <!-- Desktop Browser (desktop view) -->
-      <div class="proj-card">
-        <div class="device device-browser">
-          <div class="chrome">
-            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-          </div>
-          <div class="screen">
-            <img src="https://i.imgur.com/wMbFR0H.png" alt="VS Semi-Annual Sale desktop web hero">
-          </div>
-        </div>
-        <p class="text-sm text-gray-300 mt-3">
-          Desktop web hero for Semi-Annual Sale. Re-states the core offer and
-          keeps the CTA visible, reinforcing the email message and supporting
-          the overall <strong>+22% conversion lift</strong>.
-        </p>
-      </div>
+    <!-- OPTIONAL COPY / NOTES -->
+    <section class="space-y-3 text-sm text-gray-200">
+      <p>
+        The hero creative leans into rich color, bold typography, and a clear
+        promotional hook (&ldquo;$10 OFF full-priced bras&rdquo;) while still
+        feeling aspirational. The CTA and price lock in the offer; the model
+        choice and styling keep the tone luxe instead of discount-bin.
+      </p>
+      <p>
+        Behind the scenes, this journey connected to triggered and scheduled
+        email, on-site promo modules, and in-app messaging to reinforce the
+        offer across channels. Audience segments were built around
+        recency/frequency of bra purchases and intent signals from site browse
+        behavior.
+      </p>
+    </section>
+  </main>
 
-      <!-- iPad Card -->
-      <div class="proj-card">
-        <div class="device device-ipad">
-          <div class="screen">
-            <img src="https://i.imgur.com/ZvHcoDO.jpeg" alt="VS Semi-Annual Sale last day mobile creative">
-          </div>
-        </div>
-        <p class="text-sm text-gray-300 mt-3">
-          Last-day Semi-Annual Sale creative, tuned for tablet browsing and
-          “last chance” urgency. Part of the cadence that produced
-          <strong>+22% uplift in conversion</strong> and <strong>+15% higher AOV</strong>.
-        </p>
-      </div>
-
-    </div>
-  </section>
-</main>
-
-<footer class="text-center text-xs text-gray-500 pb-8">
-  © 2025 Judith C. L. Morris
-</footer>
-
+  <footer class="text-center text-xs text-gray-500 mt-16">
+    © 2025 Judith C. L. Morris
+  </footer>
 </body>
 </html>
