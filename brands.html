@@ -1,90 +1,326 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaign Brands & Device Previews</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brands · Judith C.L. Morris</title>
+
+  <!-- Fonts & base styles (use your existing CSS file here) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Minimal safety styles in case styles.css misses anything.
+       Your existing stylesheet will override these where needed. */
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #050505;
+      color: #f5f5f5;
+    }
+
+    .site-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background: radial-gradient(circle at top left, #222 0, #050505 45%);
+    }
+
+    /* Top nav */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 40px;
+      backdrop-filter: blur(16px);
+      background: rgba(0, 0, 0, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .brand-mark {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .brand-mark span {
+      font-weight: 700;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #f5f5f5;
+      opacity: 0.72;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      opacity: 1;
+    }
+
+    /* Page heading */
+    .page-header {
+      padding: 60px 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-bottom: 8px;
+    }
+
+    .page-title {
+      font-size: 2.4rem;
+      margin: 0 0 8px;
+    }
+
+    .page-subtitle {
+      max-width: 640px;
+      font-size: 0.98rem;
+      opacity: 0.82;
+      line-height: 1.6;
+    }
+
+    /* Brands grid */
+    #brands {
+      padding: 16px 40px 80px;
+    }
+
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 32px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .brand-card {
+      position: relative;
+      background: radial-gradient(circle at top left, #202020 0, #050505 60%);
+      border-radius: 22px;
+      padding: 18px 18px 24px;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.75);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .brand-card-hero {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(212, 175, 55, 0.9);
+      background: #000;
+      max-height: 260px;
+    }
+
+    .brand-card-hero img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .brand-meta {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      opacity: 0.8;
+      margin-bottom: 4px;
+    }
+
+    .brand-name {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .brand-description {
+      font-size: 0.85rem;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 16px;
+    }
+
+    .brand-card-footer {
+      margin-top: auto;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: transparent;
+      color: #f5f5f5;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      border-color: #d4af37;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.75);
+    }
+
+    @media (max-width: 720px) {
+      .top-nav {
+        padding: 14px 20px;
+      }
+      .page-header {
+        padding: 40px 20px 10px;
+      }
+      #brands {
+        padding: 10px 20px 60px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="site-wrapper">
 
-<main>
-    <section class="brand-grid">
+    <!-- Top navigation -->
+    <header class="top-nav">
+      <div class="brand-mark">
+        <span>Judith C.L. Morris</span> · Creative Director
+      </div>
 
-        <!-- ROGER’S ENTERPRISES -->
-        <article class="brand-card">
-            <h3>ROGER'S ENTERPRISES</h3>
-            <p>Early Black Friday “today only” pushes...</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="brands.html" class="is-active">Brands</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="strategy.html">Strategy</a></li>
+          <li><a href="big-tech.html">Big&nbsp;Tech</a></li>
+        </ul>
+      </nav>
+    </header>
 
-            <div class="preview-frame">
-                <img src="rogers-hero.jpg" alt="Roger’s Enterprises Black Friday" class="preview-image">
-            </div>
-
-            <a href="brand-rogers.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
-        <!-- VICTORIA’S SECRET -->
-        <article class="brand-card">
-            <h3>VICTORIA’S SECRET</h3>
-            <p>Mobile-first semi-annual sale journeys...</p>
-
-            <div class="preview-frame">
-                <img src="vs-hero.jpg" alt="Victoria’s Secret Creative" class="preview-image">
-            </div>
-
-            <a href="brand-vs.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
-        <!-- PACCAR / FCB -->
-        <article class="brand-card">
-            <h3>FCB CHICAGO / PACCAR</h3>
-            <p>Recommendation engines, dynamic content...</p>
-
-            <div class="preview-frame">
-                <img src="paccar-hero.jpg" alt="PACCAR Campaign" class="preview-image">
-            </div>
-
-            <a href="brand-fcb.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
-        <!-- CRAIN’S -->
-        <article class="brand-card">
-            <h3>CRAIN’S CHICAGO BUSINESS</h3>
-            <p>Editorial-grade layouts, “People on the Move” placements...</p>
-
-            <div class="preview-frame">
-                <img src="crains-hero.jpg" alt="Crain's Creative" class="preview-image">
-            </div>
-
-            <a href="brand-crains.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
-        <!-- SUN-TIMES -->
-        <article class="brand-card">
-            <h3>CHICAGO SUN-TIMES</h3>
-            <p>Paywall flows, homepage hierarchy...</p>
-
-            <div class="preview-frame">
-                <img src="suntimes-hero.jpg" alt="Sun-Times Creative" class="preview-image">
-            </div>
-
-            <a href="brand-suntimes.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
-        <!-- META / ZYNGA / SALESFORCE -->
-        <article class="brand-card">
-            <h3>META, ZYNGA, SALESFORCE & MORE</h3>
-            <p>Journey maps, SFMC/Data Cloud architecture...</p>
-
-            <div class="preview-frame">
-                <img src="meta-hero.jpg" alt="Meta / Salesforce" class="preview-image">
-            </div>
-
-            <a href="brand-meta.html" class="btn">VIEW FULL GALLERY →</a>
-        </article>
-
+    <!-- Header copy -->
+    <section class="page-header">
+      <div class="page-kicker">Selected Campaigns</div>
+      <h1 class="page-title">Brand Galleries</h1>
+      <p class="page-subtitle">
+        Retail, publishing, automotive and entertainment journeys that pair
+        premium visual design with CRM, experimentation, and lifecycle strategy.
+        Click into each brand to explore the full gallery and case study.
+      </p>
     </section>
-</main>
 
+    <!-- Brands grid -->
+    <main id="brands">
+      <div class="brands-grid">
+
+        <!-- ROGERS ENTERPRISES -->
+        <article class="brand-card">
+          <div class="brand-card-hero">
+            <img src="images/rogers-hero.jpg" alt="Rogers Enterprises Black Friday email and mobile layout" />
+          </div>
+          <div>
+            <div class="brand-meta">Retail · Jewelry</div>
+            <div class="brand-name">Rogers Enterprises</div>
+            <p class="brand-description">
+              Early Black Friday &ldquo;today only&rdquo; pushes and abandon-cart flows
+              executed across email, SMS, and mobile web to drive urgent store and
+              e-commerce traffic.
+            </p>
+          </div>
+          <div class="brand-card-footer">
+            <a href="rogers-gallery.html" class="btn">
+              View Full Gallery →
+            </a>
+          </div>
+        </article>
+
+        <!-- VICTORIA'S SECRET -->
+        <article class="brand-card">
+          <div class="brand-card-hero">
+            <img src="images/victorias-secret-hero.jpg" alt="Victoria's Secret semi-annual sale Instagram and email creative" />
+          </div>
+          <div>
+            <div class="brand-meta">Retail · Intimates</div>
+            <div class="brand-name">Victoria&rsquo;s Secret</div>
+            <p class="brand-description">
+              Semi-annual sale and Black Friday journeys spanning email, app, push,
+              and landing page&mdash;optimized mobile-first for conversion and list growth.
+            </p>
+          </div>
+          <div class="brand-card-footer">
+            <a href="victorias-secret-gallery.html" class="btn">
+              View Full Gallery →
+            </a>
+          </div>
+        </article>
+
+        <!-- FCB CHICAGO / TOYOTA FS / PACCAR -->
+        <article class="brand-card">
+          <div class="brand-card-hero">
+            <img src="images/paccar-hero.jpg" alt="PACCAR parts and service promotional email" />
+          </div>
+          <div>
+            <div class="brand-meta">Agency · Automotive &amp; Retail</div>
+            <div class="brand-name">FCB Chicago / Toyota FS / PACCAR</div>
+            <p class="brand-description">
+              Recommendation engines, dynamic content, and lease-renewal flows tuned
+              from survey insights and lifetime value models.
+            </p>
+          </div>
+          <div class="brand-card-footer">
+            <a href="paccar-fcb-gallery.html" class="btn">
+              View Full Gallery →
+            </a>
+          </div>
+        </article>
+
+        <!-- CRAIN'S CHICAGO BUSINESS -->
+        <article class="brand-card">
+          <div class="brand-card-hero">
+            <img src="images/crains-hero.jpg" alt="Crain's Chicago Business newsletter and People on the Move layouts" />
+          </div>
+          <div>
+            <div class="brand-meta">Publishing · B2B</div>
+            <div class="brand-name">Crain&rsquo;s Chicago Business</div>
+            <p class="brand-description">
+              Subscription journeys and &ldquo;People on the Move&rdquo; layouts
+              optimized for click-through, premium placements, and advertiser revenue.
+            </p>
+          </div>
+          <div class="brand-card-footer">
+            <a href="crains-gallery.html" class="btn">
+              View Full Gallery →
+            </a>
+          </div>
+        </article>
+
+        <!-- Add additional brands below using the same structure -->
+
+      </div>
+    </main>
+
+  </div>
 </body>
 </html>
