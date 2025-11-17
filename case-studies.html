@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Studies | Judith C. L. Morris</title>
+
+  <!-- Fonts + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --gold:#D4AF37;
+      --ink:#050316;
+    }
+    html,body{
+      margin:0;
+      padding:0;
+      background:radial-gradient(circle at top,#24155d 0,#050316 55%);
+      color:#e5e7eb;
+      scroll-behavior:smooth;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";
+    }
+    .container-x{width:min(1140px,92vw);margin-inline:auto}
+
+    .luxe-chrome-text{
+      font-family:'Cinzel Decorative',serif;
+      background:linear-gradient(180deg,#f7f7f7 0%,#e7cf86 20%,#b88a2a 40%,#f4e7b2 60%,#9a6a12 80%,#f6f2da 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 1px 0 rgba(255,255,255,.22),0 4px 18px rgba(0,0,0,.65);
+      letter-spacing:-.03em;
+    }
+
+    /* Buttons */
+    .btn-case-solid{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.9rem 1.7rem;
+      border-radius:999px;
+      border:1px solid var(--gold);
+      background:linear-gradient(135deg,#fdf7e3,#e2c46d,#b7871f);
+      color:#050316;
+      font-size:.78rem;
+      font-weight:600;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      text-decoration:none;
+      transition:.25s;
+    }
+    .btn-case-solid:hover{
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(212,175,55,.45);
+    }
+
+    .btn-case-ghost{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.75rem 1.4rem;
+      border-radius:999px;
+      border:1px solid rgba(212,175,55,.5);
+      color:#e5e7eb;
+      font-size:.72rem;
+      font-weight:500;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      text-decoration:none;
+      background:transparent;
+      transition:.25s;
+    }
+    .btn-case-ghost:hover{
+      border-color:var(--gold);
+      color:#fefce8;
+      background:rgba(212,175,55,.12);
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      border-radius:999px;
+      padding:.35rem .9rem;
+      font-size:.7rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+    }
+    .pill-soft{background:rgba(148,163,184,.15);color:#e5e7eb;border:1px solid rgba(148,163,184,.4)}
+    .pill-gold{background:rgba(212,175,55,.08);color:#facc15;border:1px solid rgba(212,175,55,.6)}
+
+    article{
+      border-top:1px solid rgba(148,163,184,.2);
+      padding-top:3rem;
+      padding-bottom:2.5rem;
+    }
+    article:first-of-type{border-top:none}
+    .case-grid{
+      display:grid;
+      grid-template-columns:minmax(0,1.5fr) minmax(0,1.2fr);
+      gap:2.5rem;
+    }
+    @media (max-width:900px){
+      .case-grid{grid-template-columns:1fr}
+    }
+
+    ul{margin:0;padding-left:1.1rem}
+    li{margin-bottom:.25rem}
+
+    .back-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:.75rem;
+      letter-spacing:.22em;
+      text-transform:uppercase;
+      color:#9ca3af;
+      text-decoration:none;
+    }
+    .back-link:hover{color:#fefce8}
+  </style>
+</head>
+<body>
+
+  <!-- Top bar / Back nav -->
+  <header class="border-b border-white/5">
+    <div class="container-x flex items-center justify-between gap-4 py-5">
+      <a href="portfolio.html#work" class="back-link">
+        ← Back to Portfolio
+      </a>
+      <a href="case-studies.html" class="btn-case-solid">
+        View All Case Studies
+      </a>
+    </div>
+  </header>
+
+  <!-- Page intro -->
+  <main class="container-x py-10 md:py-14 space-y-14">
+    <section class="max-w-3xl space-y-4">
+      <p class="text-xs tracking-[0.28em] uppercase text-slate-400">
+        Selected Work · Case Studies
+      </p>
+      <h1 class="luxe-chrome-text text-3xl sm:text-4xl md:text-5xl">
+        Campaigns that moved revenue, not just pixels.
+      </h1>
+      <p class="text-sm sm:text-base text-slate-200 leading-relaxed">
+        Each case study combines storytelling with the numbers hiring managers care about:
+        revenue, conversion, AOV, CAC, and list growth. These are snapshots of how I use CRM,
+        lifecycle, and creative direction to ship measurable outcomes across retail, publishing,
+        and big tech.
+      </p>
+    </section>
+
+    <!-- ================= Rogers ================= -->
+    <section id="case-studies" class="space-y-16">
+      <article id="case-rogers">
+        <header class="mb-6 space-y-3">
+          <p class="text-xs tracking-[0.22em] uppercase text-slate-400">
+            Retail · Jewelry · B2C
+          </p>
+          <h2 class="luxe-chrome-text text-2xl sm:text-3xl">
+            Rogers Enterprises — Multi-Channel Holiday & Lifecycle Engine
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 max-w-3xl">
+            From Black Friday to abandoned-cart journeys, I led cross-channel strategy and
+            creative for a jewelry retailer reaching millions of shoppers across North America.
+            The work spanned email, web, social, push, SMS, TV, radio, and direct mail—designed
+            to move both new and returning customers.
+          </p>
+        </header>
+
+        <div class="case-grid text-sm text-slate-200">
+          <!-- Left: Context -->
+          <div class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Audience</p>
+                <p>Mass-market consumers, primarily women 25–55; value-conscious but brand-aware.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Business Type</p>
+                <p>B2C retail across ecommerce + store footprint.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Channel Mix</p>
+                <p>Email, web, social, push, SMS, TV, radio, direct mail.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">My Focus</p>
+                <p>CRM strategy, offer design, journey build, experimentation, and readouts.</p>
+              </div>
+            </div>
+
+            <div class="grid gap-6 sm:grid-cols-2">
+              <div>
+                <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400 mb-2">Objectives</h3>
+                <ul class="space-y-1">
+                  <li>Make Black Friday a record-breaking revenue event.</li>
+                  <li>Use lifecycle + AI to recover high-value carts and browsers.</li>
+                  <li>Grow the email file efficiently to lower future CAC.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400 mb-2">My Role</h3>
+                <ul class="space-y-1">
+                  <li>Mapped multi-channel promo calendar and audience strategy.</li>
+                  <li>Designed journeys and triggers for holiday, evergreen, browse, and flash moments.</li>
+                  <li>Owned testing roadmap (subject lines, promos, creative variants) and results communication.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">Key Initiatives</h3>
+              <ul class="space-y-1">
+                <li><span class="pill pill-gold mr-1">Black Friday</span> Early launch across all channels with hero “Today Only” creative.</li>
+                <li><span class="pill pill-soft mr-1">Free Diamonds</span> New-customer acquisition campaign in an off-peak month.</li>
+                <li><span class="pill pill-soft mr-1">Abandoned Cart/Browse</span> Expanded from 1 email to a 3-step recovery journey with AI imagery.</li>
+                <li><span class="pill pill-soft mr-1">Mother’s Day</span> High-value gifting campaign focused on premium AOV.</li>
+                <li><span class="pill pill-soft mr-1">Flash Sale</span> 48-hour urgency play using primarily owned channels.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: Numbers -->
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-3">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400">Black Friday Mega Sale</p>
+              <ul class="space-y-1">
+                <li>⚡ <strong>$12.5MM</strong> in campaign revenue, <strong>+35% YoY</strong>.</li>
+                <li>📈 Conversion rate +<strong>2.8%</strong> vs benchmark.</li>
+                <li>💳 AOV at <strong>$285</strong> via bundles and upsell framing.</li>
+                <li>📧 <strong>150k+</strong> new emails collected; CAC held at <strong>$22</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-3">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400">Free Diamonds Campaign</p>
+              <ul class="space-y-1">
+                <li>💎 <strong>$1.8MM</strong> incremental revenue in April.</li>
+                <li>🧲 +<strong>1.5%</strong> lift in first-time buyer conversion.</li>
+                <li>💳 AOV at <strong>$215</strong> as shoppers upgraded their “free” item.</li>
+                <li>📧 <strong>85k+</strong> new subscribers added to the file.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-3">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400">Abandoned Cart / Browse</p>
+              <ul class="space-y-1">
+                <li>🔁 3-step journey: Cart → Browse → Final Offer.</li>
+                <li>🧠 AI-generated product imagery for logged-in users.</li>
+                <li>👁️‍🗨️ +<strong>45%</strong> lift in email impressions; CTR +<strong>20%</strong>.</li>
+                <li>💰 Recovery conversion rate +<strong>18%</strong>, <strong>$4.1MM</strong> annualized revenue.</li>
+                <li>💳 Recovered-cart AOV at <strong>$310</strong>.</li>
+                <li>🧪 Winning FOMO subject line drove +<strong>12%</strong> opens and +<strong>5%</strong> conversions.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-3">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400">Mother’s Day & Flash Sale</p>
+              <ul class="space-y-1">
+                <li>🌷 Mother’s Day: <strong>$3.2MM</strong> in 3 weeks; CVR peak at <strong>3.1%</strong>; AOV <strong>$335</strong>.</li>
+                <li>⏱️ Flash Sale (48 hours): <strong>$1.1MM</strong> revenue.</li>
+                <li>📲 Peak-hour CVR: <strong>5.2%</strong> via push + SMS; CAC as low as <strong>$5</strong> using owned channels.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="brand-rogers.html" class="btn-case-ghost">
+            View Campaign Gallery
+          </a>
+        </div>
+      </article>
+
+      <!-- ================= Victoria’s Secret ================= -->
+      <article id="case-vs">
+        <header class="mb-6 space-y-3">
+          <p class="text-xs tracking-[0.22em] uppercase text-slate-400">
+            Retail · Intimates · B2C
+          </p>
+          <h2 class="luxe-chrome-text text-2xl sm:text-3xl">
+            Victoria’s Secret — Semi-Annual Sale Domination
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 max-w-3xl">
+            High-stakes Semi-Annual Sale (SAS) campaigns where every creative,
+            journey, and test had to land. I partnered across CRM and media to
+            orchestrate a global, multi-channel push that protected the brand
+            while aggressively pursuing revenue.
+          </p>
+        </header>
+
+        <div class="case-grid text-sm text-slate-200">
+          <div class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Audience</p>
+                <p>Women 18–50; brand-loyal, trend-aware, shopping sales for replenishment and value.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Business Type</p>
+                <p>Global B2C retail and ecommerce.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Channel Mix</p>
+                <p>Email, web, social, push, SMS, TV, radio, direct mail.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">My Focus</p>
+                <p>Lifecycle sequencing, promo architecture, and creative direction for mobile-first journeys.</p>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">Objectives & Approach</h3>
+              <ul class="space-y-1">
+                <li>Protect and grow revenue during one of the brand’s most important sales windows.</li>
+                <li>Build journeys that feel premium but convert like performance marketing.</li>
+                <li>Use bundling and tiered offers to raise AOV without eroding margin.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Channel Performance</p>
+              <ul class="space-y-1">
+                <li>📧 Email drove <strong>45%</strong> of online conversions.</li>
+                <li>📱 Paid + organic social delivered <strong>50MM+</strong> impressions at the top of the funnel.</li>
+                <li>👀 Total cross-channel impressions exceeded <strong>180MM</strong>.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Business Impact</p>
+              <ul class="space-y-1">
+                <li>💰 <strong>$18.5MM</strong> SAS revenue.</li>
+                <li>📈 Online conversion rate +<strong>4.0%</strong> during peak weekend.</li>
+                <li>💳 AOV up <strong>+8%</strong> to <strong>$78</strong> via bundles + tiered promotion.</li>
+                <li>🎯 CAC held at a highly efficient <strong>$14</strong> thanks to high conversion and strong promotion fit.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="brand-vs.html" class="btn-case-ghost">
+            View Campaign Gallery
+          </a>
+        </div>
+      </article>
+
+      <!-- ================= FCB / AI personalization & Toyota FS ================= -->
+      <article id="case-fcb">
+        <header class="mb-6 space-y-3">
+          <p class="text-xs tracking-[0.22em] uppercase text-slate-400">
+            Agency · B2B Services
+          </p>
+          <h2 class="luxe-chrome-text text-2xl sm:text-3xl">
+            FCB Chicago — AI-Powered Personalization & Financial Journeys
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 max-w-3xl">
+            At FCB I partnered with cross-functional teams to ship AI-driven personalization
+            for a major retailer and a high-response survey program for Toyota Financial
+            Services—translating research and data into real revenue and retention value.
+          </p>
+        </header>
+
+        <div class="case-grid text-sm text-slate-200">
+          <div class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Audience</p>
+                <p>Varies by client: mass-market retail shoppers and auto finance customers.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Business Type</p>
+                <p>B2B agency work in support of B2C and B2B clients.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Channel Mix</p>
+                <p>Web offers, email, paid social, and survey programs.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">My Focus</p>
+                <p>Journey architecture, test design, and storytelling that clients could sell up.</p>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">AI-Driven Personalized Offers</h3>
+              <ul class="space-y-1">
+                <li>Used AI to determine next-best offer based on real-time browsing and purchase history.</li>
+                <li>Deployed personalized blocks across web, email, and paid social retargeting.</li>
+                <li>Built a testing framework comparing static vs. dynamic offers.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Retail Client Results</p>
+              <ul class="space-y-1">
+                <li>👀 Personalized offer impressions: <strong>25MM+</strong>.</li>
+                <li>📈 Conversion rate lift of <strong>+15%</strong> vs static experiences.</li>
+                <li>💳 AOV up <strong>+12%</strong> to <strong>$95</strong> with personalized bundles.</li>
+                <li>💰 <strong>$6MM</strong> attributable revenue from personalized offers.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Toyota Financial Services Survey</p>
+              <ul class="space-y-1">
+                <li>📋 Led design and deployment of an omnichannel satisfaction survey program.</li>
+                <li>🗳️ Achieved a <strong>95%</strong> response rate from the target audience.</li>
+                <li>🧩 Insights reprioritized digital product features and service flows.</li>
+                <li>💸 Influenced an estimated <strong>$50MM</strong> in annual customer retention value.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="brand-fcb.html" class="btn-case-ghost">
+            View Campaign Gallery
+          </a>
+        </div>
+      </article>
+
+      <!-- ================= Crain’s ================= -->
+      <article id="case-crains">
+        <header class="mb-6 space-y-3">
+          <p class="text-xs tracking-[0.22em] uppercase text-slate-400">
+            Publishing · B2B · Advertising
+          </p>
+          <h2 class="luxe-chrome-text text-2xl sm:text-3xl">
+            Crain’s Chicago Business — Audience Engagement & Interface Design
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 max-w-3xl">
+            At Crain’s I focused on ad performance and editorial experience at the same time—
+            building campaigns and UI that respected readers while driving clicks, sign-ups,
+            and premium ad revenue.
+          </p>
+        </header>
+
+        <div class="case-grid text-sm text-slate-200">
+          <div class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Audience</p>
+                <p>Business executives, professionals, and civic leaders in the region.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Business Type</p>
+                <p>B2B publishing and advertising.</p>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">Lollapalooza Ad Campaign</h3>
+              <ul class="space-y-1">
+                <li>Executed a multi-channel campaign across email, programmatic web display, and social.</li>
+                <li>Deployed multivariate tests on imagery, copy, and CTAs.</li>
+                <li>Winning sunset stage image delivered a +<strong>25%</strong> CTR vs control.</li>
+              </ul>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">“People on the Move” Homepage UI</h3>
+              <ul class="space-y-1">
+                <li>Redesigned module to prioritize scannability, profile clicks, and email sign-ups.</li>
+                <li>Balanced editorial needs with sponsorship and advertising priorities.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Lollapalooza Results</p>
+              <ul class="space-y-1">
+                <li>👀 <strong>10MM</strong> total impressions.</li>
+                <li>🔗 <strong>85k+</strong> click-through conversions to the ticketing partner.</li>
+                <li>💰 Sold out premium ad inventory, generating <strong>$500k</strong> in revenue.</li>
+              </ul>
+            </div>
+
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">People on the Move Metrics</p>
+              <ul class="space-y-1">
+                <li>📈 Traffic to the section up <strong>+15%</strong>.</li>
+                <li>👤 Profile CTR up <strong>+10%</strong>.</li>
+                <li>📧 Newsletter sign-ups from this module up <strong>+5%</strong>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="brand-crains.html" class="btn-case-ghost">
+            View Campaign Gallery
+          </a>
+        </div>
+      </article>
+
+      <!-- ================= Chicago Sun-Times ================= -->
+      <article id="case-suntimes">
+        <header class="mb-6 space-y-3">
+          <p class="text-xs tracking-[0.22em] uppercase text-slate-400">
+            Publishing · B2C · Membership
+          </p>
+          <h2 class="luxe-chrome-text text-2xl sm:text-3xl">
+            Chicago Sun-Times — Digital Membership & Experience
+          </h2>
+          <p class="text-sm sm:text-base text-slate-200 max-w-3xl">
+            At the Chicago Sun-Times I helped shift the business from a hard paywall to an
+            email-gated, membership-forward model—growing the audience, improving email
+            experience, and driving donations without sacrificing access.
+          </p>
+        </header>
+
+        <div class="case-grid text-sm text-slate-200">
+          <div class="space-y-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Audience</p>
+                <p>Civic-minded local news readers across Chicagoland.</p>
+              </div>
+              <div>
+                <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-1">Business Type</p>
+                <p>B2C news + membership.</p>
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">Paywall to Email-Gated Model</h3>
+              <ul class="space-y-1">
+                <li>Transitioned from hard paywall to email-gated access on homepage and articles.</li>
+                <li>Introduced two segments: Member (donated) vs Non-Member (email-only).</li>
+                <li>Designed a welcome journey that educates while gently asking for support.</li>
+              </ul>
+            </div>
+
+            <div class="space-y-2">
+              <h3 class="text-xs uppercase tracking-[0.22em] text-slate-400">Consolidated Newsletter Experience</h3>
+              <ul class="space-y-1">
+                <li>Built a system to send one consolidated daily email containing all selected newsletters.</li>
+                <li>Reduced inbox fatigue without shrinking engagement surface area.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="rounded-2xl border border-white/10 bg-black/40 p-5 space-y-1">
+              <p class="uppercase tracking-[0.22em] text-xs text-slate-400 mb-2">Audience & Revenue Impact</p>
+              <ul class="space-y-1">
+                <li>👥 Registered user base grew by <strong>300k+</strong> Non-Members in year one.</li>
+                <li>💸 Donation-focused email in the welcome series converted <strong>1.2%</strong> to paying Member.</li>
+                <li>📧 Consolidated daily newsletter increased open rate by <strong>+22%</strong>.</li>
+                <li>🔁 Subscriber churn decreased by <strong>15%</strong> thanks to better experience.</li>
+                <li>🎯 CAC for Non-Members effectively <strong>$0</strong>, expanding top-of-funnel reach.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="brand-suntimes.html" class="btn-case-ghost">
+            View Campaign Gallery
+          </a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/5 mt-8">
+    <div class="container-x py-6 text-[0.7rem] text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <span>© 2025 Judith C. L. Morris · CRM & Automation Storytelling</span>
+      <span class="text-slate-500">Additional campaign details available on request.</span>
+    </div>
+  </footer>
+</body>
+</html>
