@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victoria’s Secret – Campaign Gallery | Judith C. L. Morris</title>
+  <title>Victoria's Secret – Campaign Gallery</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -11,53 +11,71 @@
   <style>
     :root{
       --gold:#D4AF37;
-      --ink:#050316;
-      --card:#0b0b12;
-      --line:#17172a;
-      --vs-pink:#fb8abf;
+      --ink:#050320;
+      --card:#050320;
+      --line:#171717;
     }
 
     html,body{
       margin:0;
       padding:0;
-      background:radial-gradient(circle at top,#4c1d95 0,#050316 55%);
-      color:#f3f4f6;
+      background:radial-gradient(circle at top,#3b0764 0,#020617 55%,#000 100%);
+      color:#e5e7eb;
       scroll-behavior:smooth;
     }
 
-    .container-x{width:min(1140px,92vw);margin-inline:auto}
-    .font-inter{
+    .container-x{
+      width:min(1140px,92vw);
+      margin-inline:auto;
+    }
+
+    body{
       font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
     }
 
     .luxe-chrome-text{
-      font-family:'Cinzel Decorative',serif;
-      background:linear-gradient(180deg,#fdf7f9 0%,#fcd3ea 18%,#f4a2d1 35%,#ffe7f4 55%,#f08ac3 75%,#fdf7f9 100%);
+      font-family:"Cinzel Decorative",serif;
+      background:linear-gradient(180deg,#f7f7f7 0%,#f4e7b2 20%,#b88a2a 40%,#f6f2da 65%,#7a5310 100%);
       -webkit-background-clip:text;
       background-clip:text;
       -webkit-text-fill-color:transparent;
-      text-shadow:0 1px 0 rgba(255,255,255,.3),0 6px 24px rgba(0,0,0,.65);
+      text-shadow:0 1px 0 rgba(255,255,255,.22),0 6px 24px rgba(0,0,0,.6);
       letter-spacing:-.02em;
     }
 
-    /* Device frames (same system as Rogers) */
-    .device{position:relative;display:inline-block;transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s}
+    .back-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:.8rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:#e5e7eb;
+      text-decoration:none;
+    }
+    .back-link:hover{color:var(--gold)}
+
+    /* Device frames – sized so they don’t overlap */
+    .device{
+      position:relative;
+      display:inline-block;
+      transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
+    }
     .device .screen{
-      background:#111;
+      background:#020617;
       overflow:hidden;
       width:100%;
       height:100%;
       border-radius:inherit;
-      border:1px solid #e5e7eb;
+      border:1px solid #e5e7eb1a;
     }
-
     .device-iphone{
       border:4px solid var(--gold);
-      border-radius:28px;
-      width:220px;
-      height:440px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.5);
+      border-radius:26px;
+      width:210px;
+      height:430px;
+      background:#020617;
+      box-shadow:0 10px 40px rgba(0,0,0,.6);
     }
     .device-iphone .notch{
       position:absolute;
@@ -66,31 +84,21 @@
       transform:translateX(-50%);
       width:56px;
       height:12px;
-      background:#0f0f0f;
+      background:#020617;
       border-radius:8px;
       z-index:2;
-      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
     }
-
-    .device-ipad{
-      border:6px solid var(--gold);
-      border-radius:18px;
-      width:360px;
-      height:480px;
-      background:#0f0f0f;
-      box-shadow:0 10px 40px rgba(0,0,0,.5);
-    }
-
     .device-browser{
-      width:min(560px,92vw);
+      width:340px;
       border:2px solid var(--gold);
       border-radius:12px;
-      background:#0f0f10;
-      box-shadow:0 16px 40px rgba(0,0,0,.55);
+      background:#020617;
+      box-shadow:0 16px 40px rgba(0,0,0,.7);
     }
     .device-browser .chrome{
-      height:36px;
-      background:linear-gradient(180deg,#f5f5f5,#e5e5e5);
+      height:34px;
+      background:linear-gradient(180deg,#f9fafb,#e5e7eb);
       border-bottom:1px solid var(--gold);
       border-radius:12px 12px 0 0;
       display:flex;
@@ -100,8 +108,16 @@
     }
     .dot{width:10px;height:10px;border-radius:50%;background:#9ca3af}
     .device-browser .screen{
-      height:clamp(240px,45vw,360px);
+      height:260px;
       border-radius:0 0 12px 12px;
+    }
+    .device-ipad{
+      border:6px solid var(--gold);
+      border-radius:18px;
+      width:280px;
+      height:420px;
+      background:#020617;
+      box-shadow:0 10px 40px rgba(0,0,0,.6);
     }
 
     .screen img{
@@ -111,19 +127,22 @@
       object-fit:cover;
     }
 
-    /* Grid + cards */
     .brand-grid{
       display:grid;
-      grid-template-columns:repeat(3,minmax(220px,1fr));
+      grid-template-columns:repeat(3,minmax(0,1fr));
       gap:24px;
       justify-items:center;
       align-items:flex-start;
     }
-    @media (max-width:1024px){
-      .brand-grid{grid-template-columns:repeat(2,minmax(240px,1fr))}
+    @media (max-width:960px){
+      .brand-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
     }
-    @media (max-width:768px){
-      .brand-grid{grid-template-columns:1fr}
+    @media (max-width:720px){
+      .brand-grid{
+        grid-template-columns:1fr;
+      }
     }
 
     .proj-card{
@@ -137,76 +156,25 @@
       border-radius:18px;
       background:var(--card);
       border:1px solid var(--line);
-      box-shadow:0 12px 44px rgba(0,0,0,.55);
+      box-shadow:0 12px 44px rgba(0,0,0,.65);
       text-align:center;
       margin-inline:auto;
-      transition:box-shadow .5s,border-color .5s,transform .5s cubic-bezier(.2,.8,.2,1);
     }
     .proj-card:hover{
       transform:translateY(-3px);
-      box-shadow:0 22px 64px rgba(251,138,191,.25);
-      border-color:rgba(251,138,191,.55);
+      box-shadow:0 22px 64px rgba(212,175,55,.25);
+      border-color:rgba(212,175,55,.5);
     }
 
-    .neat-caption{
-      max-width:560px;
-      text-align:left;
-      border:1px solid #272741;
-      background:#050718;
-      border-radius:12px;
-      padding:12px;
+    .caption{
       font-size:.85rem;
-    }
-    .neat-caption p{margin:.25rem 0}
-    .neat-caption .label{color:#f9fafb;font-weight:600}
-    .neat-caption .body{color:#e5e7eb}
-    .neat-caption .stats{color:#cbd5e1}
-
-    .back-link{
-      display:inline-flex;
-      align-items:center;
-      gap:.4rem;
-      font-size:.8rem;
-      letter-spacing:.2em;
-      text-transform:uppercase;
       color:#e5e7eb;
-      text-decoration:none;
+      max-width:420px;
     }
-    .back-link:hover{color:var(--vs-pink)}
-
-    /* Ghost button → VS case study */
-    .btn-case-ghost{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:.4rem;
-      padding:.9rem 1.9rem;
-      border-radius:999px;
-      border:1px solid rgba(248,250,252,.8);
-      background:transparent;
-      color:#f9fafb;
-      font-size:.8rem;
-      letter-spacing:.2em;
-      text-transform:uppercase;
-      text-decoration:none;
-      font-weight:600;
-      transition:.25s;
-    }
-    .btn-case-ghost span{
-      display:inline-block;
-      width:.45rem;
-      height:.45rem;
-      border-radius:999px;
-      background:var(--vs-pink);
-    }
-    .btn-case-ghost:hover{
-      background:rgba(15,23,42,.9);
-      color:var(--vs-pink);
-      box-shadow:0 16px 38px rgba(15,23,42,.9);
-    }
+    .caption strong{color:#f9fafb}
   </style>
 </head>
-<body class="font-inter">
+<body>
 
   <!-- Back to Brands -->
   <div class="container-x pt-6">
@@ -215,93 +183,73 @@
 
   <!-- Intro -->
   <header class="container-x pt-6 pb-6">
-    <p class="text-xs tracking-[.25em] uppercase text-pink-200 mb-2">
-      Victoria’s Secret • Retail • Intimates
+    <p class="text-xs tracking-[.25em] uppercase text-violet-200 mb-2">
+      Retail • Intimates • B2C
     </p>
-    <h1 class="luxe-chrome-text text-4xl mb-2">Campaign Gallery</h1>
+    <h1 class="luxe-chrome-text text-4xl mb-3">Victoria's Secret – Semi-Annual Sale</h1>
     <p class="text-slate-200 max-w-2xl">
-      High-stakes Semi-Annual Sale journeys spanning email, app, landing pages and social.
-      Mobile-first creative, offer framing, and bundle strategy tuned to drive replenishment,
-      boost AOV, and protect conversion during peak traffic.
+      Semi-Annual Sale journey spanning mobile email, desktop hub, and tablet category grid.
+      Creative is tuned for replenishment shoppers, high-impact photography, and clear
+      promotional framing to lift conversion and AOV.
     </p>
   </header>
 
-  <!-- Victoria's Secret Gallery -->
-  <section id="vs-case-gallery" class="container-x pb-16">
+  <!-- Gallery -->
+  <section class="container-x pb-16">
     <div class="brand-grid">
 
-      <!-- 1. iPhone – SAS hero email -->
+      <!-- Card 1: Mobile Hero Email -->
       <div class="proj-card">
         <div class="device device-iphone">
           <div class="notch"></div>
           <div class="screen">
-            <img src="https://i.imgur.com/AZfRJCj.jpeg" alt="Victoria’s Secret Semi-Annual Sale hero email on mobile">
+            <img src="https://i.imgur.com/bsVD25j.jpeg" alt="Victoria's Secret Semi-Annual Sale mobile hero email">
           </div>
         </div>
-        <div class="neat-caption">
-          <p class="label">Semi-Annual Sale — Mobile Hero Email</p>
-          <p class="body">
-            Thumb-stopping hero email that set up the full SAS story for loyal lingerie shoppers,
-            with clear tiers, bundle structure, and direct paths back to category.
-          </p>
-          <p class="stats">
-            Email delivered <strong>45%</strong> of all online conversions and helped lift overall
-            campaign conversion by <strong>+4.0%</strong>.
+        <div class="caption">
+          <p><strong>Mobile hero email</strong> kicking off the Semi-Annual Sale with bold photography and $10-off framing for full-priced bras.</p>
+          <p class="mt-1">
+            Email delivered <strong>45%</strong> of all online conversions and helped lift overall campaign
+            conversion by <strong>+4.0%</strong>.
           </p>
         </div>
       </div>
 
-      <!-- 2. Browser – SAS landing / sale hub -->
+      <!-- Card 2: Desktop Hub -->
       <div class="proj-card">
         <div class="device device-browser">
           <div class="chrome">
             <span class="dot"></span><span class="dot"></span><span class="dot"></span>
           </div>
           <div class="screen">
-            <img src="https://i.imgur.com/wMbFR0H.png" alt="Victoria’s Secret Semi-Annual Sale desktop hub">
+            <img src="https://i.imgur.com/62ItAde.jpeg" alt="Victoria's Secret Semi-Annual Sale desktop hub">
           </div>
         </div>
-        <div class="neat-caption">
-          <p class="label">Semi-Annual Sale — Desktop Hub</p>
-          <p class="body">
-            Central sale destination carrying through the email promise with strong hero
-            photography, tiered offers, and clear navigation into bras, panties, and sleep.
-          </p>
-          <p class="stats">
-            Contributed to <strong>$18.5M</strong> in SAS revenue and an AOV lift of
-            <strong>+8%</strong> to <strong>$78</strong> through bundling and threshold offers.
+        <div class="caption">
+          <p><strong>Desktop sale hub</strong> carrying through core typography, tiered offers, and direct paths into bras, panties, and sleep.</p>
+          <p class="mt-1">
+            Hub contributed to <strong>$18.5M</strong> in SAS revenue and supported an
+            <strong>+8%</strong> lift in AOV through bundling and threshold offers.
           </p>
         </div>
       </div>
 
-      <!-- 3. iPad – SAS category grid / PDP entry -->
+      <!-- Card 3: Tablet Category Grid -->
       <div class="proj-card">
         <div class="device device-ipad">
           <div class="screen">
-            <img src="https://i.imgur.com/ZvHcoDO.jpeg" alt="Victoria’s Secret Semi-Annual Sale category grid on tablet">
+            <img src="https://i.imgur.com/t0Jz6oD.png" alt="Victoria's Secret Semi-Annual Sale tablet category grid">
           </div>
         </div>
-        <div class="neat-caption">
-          <p class="label">Semi-Annual Sale — Tablet Category Grid</p>
-          <p class="body">
-            Tablet-optimized grid view connecting promo tiles to PDPs, designed for quick
-            comparison and add-to-bag from couch, bed, or on-the-go browsing.
-          </p>
-          <p class="stats">
-            Helped keep tablet shoppers converting in line with mobile, while supporting
+        <div class="caption">
+          <p><strong>Tablet-optimized category grid</strong> connecting promo tiles to PDPs for couch, bed, or on-the-go browsing.</p>
+          <p class="mt-1">
+            Grid kept tablet shoppers converting in line with mobile, while supporting
             over <strong>180M</strong> cross-channel impressions.
           </p>
         </div>
       </div>
 
-    </div>
-
-    <!-- Ghost button → full VS case study -->
-    <div class="mt-10 text-center">
-      <a href="case-studies.html#case-vs" class="btn-case-ghost">
-        Read Full Victoria’s Secret Case Study
-        <span></span>
-      </a>
     </div>
   </section>
 
