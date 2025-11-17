@@ -3,235 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victoria’s Secret · Brand Gallery | Judith C. L. Morris</title>
+  <title>Victoria's Secret – Brand Gallery | Judith C. L. Morris</title>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Inter:wght@300;400;500;700&display=swap"
-    rel="stylesheet"
-  />
+  <!-- Fonts + Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    :root { --gold:#D4AF37; }
-
-    body {
-      margin: 0;
-      padding: 0;
-      color: #f9fafb;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(circle at top, #221650 0, #050320 55%, #050509 100%);
+    :root{
+      --gold:#D4AF37;
+      --ink:#050320;
+      --card:#050320;
+      --line:#171717;
     }
 
-    .luxe-chrome-text {
-      font-family: "Cinzel Decorative", serif;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: linear-gradient(
-        120deg,
-        #fef7d0 0%,
-        #f5d793 25%,
-        #f1b74f 50%,
-        #f7e2a9 75%,
-        #fefbf0 100%
-      );
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      text-shadow: 0 0 14px rgba(0, 0, 0, 0.75);
+    html,body{
+      background:var(--ink);
+      color:#e5e7eb; /* changed from #221650 so text is visible */
+      scroll-behavior:smooth;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
     }
 
-    .back-btn {
-      border: 1px solid rgba(255, 255, 255, 0.9);
-      padding: 0.55rem 1.7rem;
-      border-radius: 999px;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.75rem;
-      font-weight: 600;
-      transition: 0.18s;
-    }
-    .back-btn:hover {
-      background: var(--gold);
-      color: #050509;
-      border-color: var(--gold);
+    .container-x{
+      width:min(1140px,92vw);
+      margin-inline:auto;
     }
 
-    .section-label {
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      font-size: 0.75rem;
-      color: #9ca3af;
+    .luxe-chrome-text{
+      font-family:'Cinzel Decorative',serif;
+      background:linear-gradient(180deg,#f7f7f7 0%,#e7cf86 15%,#b88a2a 35%,#f4e7b2 50%,#9a6a12 65%,#f6f2da 82%,#7a5310 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 1px 0 rgba(255,255,255,.22),0 2px 8px rgba(0,0,0,.45);
+      letter-spacing:-.02em;
     }
 
-    .touchpoint {
-      background: radial-gradient(circle at top, #15101f 0, #040308 60%, #020107 100%);
-      border-radius: 2rem;
-      border: 1px solid rgba(212, 175, 55, 0.9);
-      padding: 1.9rem 1.8rem 1.6rem;
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.85);
+    .btn{
+      display:inline-block;
+      border:1px solid rgba(255,255,255,.25);
+      padding:.75rem 1.3rem;
+      border-radius:999px;
+      font-weight:600;
+      text-transform:uppercase;
+      font-size:.8rem;
+      letter-spacing:.16em;
+      transition:.3s;
+      color:#f3f4f6;
+    }
+    .btn:hover{
+      background:var(--gold);
+      color:#000;
+      border-color:var(--gold);
     }
 
-    .device-shell {
-      border-radius: 1.6rem;
-      background: #050509;
-      padding: 0.85rem;
-      border: 2px solid rgba(212, 175, 55, 0.95);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.9);
+    .device{
+      position:relative;
+      display:inline-block;
+      transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
+    }
+    .device .screen{
+      background:#111;
+      overflow:hidden;
+      width:100%;
+      height:100%;
+      border-radius:inherit;
+      border:1px solid #e5e7eb;
+    }
+    .device-iphone{
+      border:4px solid #D4AF37;
+      border-radius:28px;
+      width:220px;
+      height:440px;
+      background:#0f0f0f;
+      box-shadow:0 10px 40px rgba(0,0,0,.5);
+    }
+    .device-iphone .notch{
+      position:absolute;
+      top:8px;
+      left:50%;
+      transform:translateX(-50%);
+      width:56px;
+      height:12px;
+      background:#0f0f0f;
+      border-radius:8px;
+      z-index:2;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.06);
+    }
+    .device-browser{
+      width:min(560px,92vw);
+      border:2px solid #D4AF37;
+      border-radius:12px;
+      background:#0f0f10;
+      box-shadow:0 16px 40px rgba(0,0,0,.55);
+    }
+    .device-browser .chrome{
+      height:36px;
+      background:linear-gradient(180deg,#f5f5f5,#e5e5e5);
+      border-bottom:1px solid #D4AF37;
+      border-radius:12px 12px 0 0;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:0 12px;
+    }
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#9ca3af;
+    }
+    .device-browser .screen{
+      height:clamp(260px,45vw,360px);
+      border-radius:0 0 12px 12px;
+    }
+    .screen img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
 
-    .device-inner {
-      border-radius: 1.25rem;
-      overflow: hidden;
-      background: #000;
+    .brand-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(260px,1fr));
+      gap:28px;
+      justify-items:center;
+      align-items:flex-start;
+    }
+    @media (max-width: 820px){
+      .brand-grid{grid-template-columns:1fr;}
     }
 
-    .device-inner img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
+    .proj-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      justify-content:center;
+      align-items:center;
+      padding:22px;
+      border-radius:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      box-shadow:0 12px 44px rgba(0,0,0,.55);
+      text-align:center;
+      margin-inline:auto;
+    }
+    .proj-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 22px 64px rgba(212,175,55,.2);
+      border-color:rgba(212,175,55,.35);
     }
 
-    .metrics {
-      margin-top: 1.2rem;
-      border-radius: 1.25rem;
-      background: radial-gradient(circle at top, #151219 0, #050309 70%);
-      border: 1px solid rgba(212, 175, 55, 0.55);
-      padding: 1rem 1.1rem 0.9rem;
-      font-size: 0.78rem;
-      line-height: 1.5;
+    .subtitle{
+      color:#d1d5db;
+      font-size:.9rem;
+      max-width:720px;
+      margin:0 auto;
     }
-
-    .metrics strong {
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 0.68rem;
-      color: #e5e7eb;
+    .caption{
+      font-size:.8rem;
+      color:#e5e7eb;
+      max-width:400px;
+      margin:0 auto;
     }
-
-    .metrics-footer {
-      font-size: 0.7rem;
-      margin-top: 0.45rem;
-      color: #d1d5db;
+    .stats{
+      font-size:.8rem;
+      color:#cbd5e1;
     }
   </style>
 </head>
-<body>
-  <main class="max-w-6xl mx-auto px-6 pt-12 pb-20">
 
-    <div class="flex justify-between items-start mb-10">
+<body>
+
+  <header class="container-x pt-10 pb-6">
+    <div class="flex items-center justify-between gap-4 flex-wrap">
       <div>
-        <p class="section-label">Brand Gallery</p>
-        <h1 class="text-3xl sm:text-4xl luxe-chrome-text mt-2">
-          Victoria’s Secret
-        </h1>
-        <p class="mt-4 text-gray-300 max-w-xl leading-relaxed text-sm sm:text-base">
-          Semi-annual sale journeys spanning email, social, app and landing pages.
-          Mobile-first creative, thumb-stopping imagery, and promotional framing
-          designed to lift click-through and conversion.
+        <p class="text-xs tracking-[0.22em] uppercase text-gray-400 mb-2">
+          Brand Gallery
         </p>
+        <h1 class="luxe-chrome-text text-3xl sm:text-4xl">
+          Victoria's Secret
+        </h1>
       </div>
 
-      <a href="brandsgallery.html#vs" class="back-btn">← Back to Brands</a>
+      <div class="flex justify-end">
+        <a href="portfolio.html#brands" class="btn">← Back to Brands</a>
+      </div>
     </div>
 
-    <!-- 3-column device grid -->
-    <section class="grid md:grid-cols-3 gap-8">
+    <p class="subtitle mt-4">
+      Semi-annual sale journeys spanning email, social, app and landing pages.
+      Mobile-first creative, thumb-stopping imagery, and promotional framing
+      designed to lift click-through and conversion.
+    </p>
+  </header>
 
-      <!-- MOBILE SOCIAL FEED · PHONE -->
-      <article class="touchpoint">
-        <div class="section-label text-xs mb-3">
-          Mobile Social Feed · Phone
-        </div>
+  <main class="container-x pb-14">
+    <section class="border-t border-[#1e1e1e] pt-8">
+      <div class="brand-grid">
 
-        <div class="device-shell">
-          <div class="device-inner">
-            <img
-              src="images/vs-hero-phone.jpg"
-              alt="Victoria’s Secret mobile social feed – $10 OFF full-priced bras"
-            />
+        <!-- Card 1: Mobile placements -->
+        <div class="proj-card">
+          <div class="device device-iphone">
+            <div class="notch"></div>
+            <div class="screen">
+              <img src="https://i.imgur.com/bsVD25j.jpeg" alt="Victoria's Semi-annual sale Social Mobile Ad">
+            </div>
+          </div>
+          <div class="caption">
+            <p>
+              Premium mobile placements tuned for CTR and lead-gen quality across C-suite segments.
+            </p>
+            <p class="stats mt-1">
+              Conversions <strong>+6%</strong> · Incremental revenue <strong>+$120K</strong>
+            </p>
           </div>
         </div>
 
-        <div class="metrics mt-4">
-          <p><strong>Urgency</strong> Final-day “last chance” framing with a clear
-            $10-off hook on full-priced bras.</p>
-          <p class="mt-1"><strong>Value</strong> High-impact offer framed against rich,
-            luxe color to keep the brand premium.</p>
-          <p class="mt-1"><strong>Connection</strong> Creative centers a confident Black
-            model and styling that feels celebratory, not discount-bin.</p>
-          <p class="metrics-footer">
-            Conversions increased by +18%.<br />
-            Incremental revenue increased by +$420K.
-          </p>
-        </div>
-      </article>
-
-      <!-- PROMO EMAIL LAYOUT · TABLET -->
-      <article class="touchpoint">
-        <div class="section-label text-xs mb-3">
-          Promo Email Layout · Tablet
-        </div>
-
-        <div class="device-shell">
-          <div class="device-inner">
-            <img
-              src="images/vs-hero-tablet.jpg"
-              alt="Victoria’s Secret semi-annual sale email layout on tablet"
-            />
+        <!-- Card 2: Semi-annual sale – desktop -->
+        <div class="proj-card">
+          <div class="device device-browser">
+            <div class="chrome">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+            <div class="screen">
+              <!-- FIXED: closed the alt quote -->
+              <img src="https://i.imgur.com/62ItAde.jpeg" alt="Victoria's Secret Semi-annual Sale desktop placements">
+            </div>
+          </div>
+          <div class="caption">
+            <p>
+              Desktop layout with promotion positioned above the fold to keep the offer the primary signal.
+            </p>
+            <p class="stats mt-1">
+              Conversions <strong>+4%</strong> · Incremental revenue <strong>+$90K</strong>
+            </p>
           </div>
         </div>
 
-        <div class="metrics mt-4">
-          <p><strong>Urgency</strong> “Last day of the Semi-Annual Sale” headline
-            drives immediate clicks.</p>
-          <p class="mt-1"><strong>Value</strong> Product collage pairs hero sets with
-            complementary accessories for higher AOV.</p>
-          <p class="mt-1"><strong>Connection</strong> Copy leans into celebration and
-            self-treat language to keep the tone aspirational.</p>
-          <p class="metrics-footer">
-            Email CTR lifted by +22%.<br />
-            Incremental revenue increased by +$510K.
-          </p>
-        </div>
-      </article>
-
-      <!-- LANDING PAGE HERO · DESKTOP -->
-      <article class="touchpoint">
-        <div class="section-label text-xs mb-3">
-          Landing Page Hero · Desktop
-        </div>
-
-        <div class="device-shell">
-          <div class="device-inner">
-            <img
-              src="images/vs-hero-desktop.jpg"
-              alt="Victoria’s Secret Semi-Annual Sale desktop hero"
-            />
+        <!-- Card 3: Semi-annual Sale – iPad / mobile view -->
+        <div class="proj-card">
+          <div class="device device-iphone">
+            <div class="notch"></div>
+            <div class="screen">
+              <img src="https://i.imgur.com/t0Jz6oD.png" alt="Victoria's Secret Semi-annual Sale tablet or mobile view">
+            </div>
+          </div>
+          <div class="caption">
+            <p>
+              Mobile view locks straight onto the list, optimized for fast-scrolling readers on phones and tablets.
+            </p>
+            <p class="stats mt-1">
+              Conversions <strong>+4%</strong> · Incremental revenue <strong>+$70K</strong>
+            </p>
           </div>
         </div>
 
-        <div class="metrics mt-4">
-          <p><strong>Urgency</strong> Bold typographic hero announcing “The Semi-Annual
-            Sale – Ends Soon, Up to 60% Off”.</p>
-          <p class="mt-1"><strong>Value</strong> Clean, single-focus hero keeps the
-            discount and end date unmistakable.</p>
-          <p class="mt-1"><strong>Connection</strong> Color system stays on-brand
-            with VS pink while supporting a frictionless path to product grids.</p>
-          <p class="metrics-footer">
-            Landing-page click-through increased by +15%.<br />
-            Incremental revenue increased by +$360K.
-          </p>
-        </div>
-      </article>
-
+      </div>
     </section>
-
-    <footer class="text-xs text-gray-500 mt-10">
-      © 2025 Judith C. L. Morris
-    </footer>
   </main>
+
+  <footer class="text-center text-xs text-gray-500 pb-8">
+    © 2025 Judith C. L. Morris
+  </footer>
+
 </body>
 </html>
