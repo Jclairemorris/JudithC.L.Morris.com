@@ -10,7 +10,11 @@
 
   <style>
     :root{
-      --gold:#D4AF37;
+      --gold-light:#F7F2D0;
+      --gold-soft:#EAD08A;
+      --gold-main:#D4AF37;
+      --gold-deep:#A67C00;
+      --gold-shadow:#7A5310;
       --ink:#050320;
     }
 
@@ -20,10 +24,8 @@
       margin:0;
       padding:0;
       min-height:100vh;
-      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(circle at top,#2f1f93 0,#050316 55%),
-        #000;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial;
+      background: radial-gradient(circle at top,#2f1f93 0,#050316 55%), #000;
       color:#e5e7eb;
     }
 
@@ -33,7 +35,7 @@
     }
 
     .hero{
-      padding:72px 0 72px;
+      padding:72px 0;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -46,11 +48,19 @@
       font-size:2.4rem;
       letter-spacing:.18em;
       text-transform:uppercase;
-      background:linear-gradient(180deg,#fdf7e3 0%,#f4d88a 20%,#b7871f 45%,#f3e7b5 60%,#8b5c12 85%,#fdf7e3 100%);
+      background:linear-gradient(
+        180deg,
+        var(--gold-light) 0%,
+        var(--gold-soft) 15%,
+        var(--gold-main) 35%,
+        var(--gold-soft) 55%,
+        var(--gold-deep) 75%,
+        var(--gold-shadow) 100%
+      );
       -webkit-background-clip:text;
       background-clip:text;
       -webkit-text-fill-color:transparent;
-      text-shadow:0 1px 0 rgba(255,255,255,.22),0 6px 24px rgba(0,0,0,.55);
+      text-shadow:0 1px 2px rgba(0,0,0,.6);
     }
 
     .tagline{
@@ -65,14 +75,14 @@
       margin-top:2rem;
       display:flex;
       flex-wrap:wrap;
-      gap:0.75rem;
+      gap:1rem;
     }
 
     .cta-btn{
       display:inline-block;
       padding:0.9rem 1.7rem;
       border-radius:999px;
-      border:1px solid rgba(148,163,184,.8);
+      border:1px solid rgba(255,255,255,.35);
       background:rgba(15,23,42,.85);
       color:#e5e7eb;
       font-size:.8rem;
@@ -85,16 +95,22 @@
 
     .cta-btn:hover{
       background:#0b1120;
-      box-shadow:0 14px 32px rgba(15,23,42,.75);
+      box-shadow:0 14px 32px rgba(15,23,42,.65);
     }
 
-    /* Gold case-studies button */
+    /* GOLD CASE STUDIES BUTTON – YOUR EXACT HEX CODES */
     .btn-case-gold{
       display:inline-block;
       padding:0.9rem 1.7rem;
       border-radius:999px;
-      border:1px solid var(--gold);
-      background:linear-gradient(135deg,#fdf7e3,#e2c46d,#b7871f);
+      border:1px solid var(--gold-main);
+      background:linear-gradient(
+        135deg,
+        var(--gold-light),
+        var(--gold-soft),
+        var(--gold-main),
+        var(--gold-deep)
+      );
       color:#050316;
       font-size:.8rem;
       font-weight:600;
@@ -105,31 +121,26 @@
     }
 
     .btn-case-gold:hover{
-      transform:translateY(-1px);
-      box-shadow:0 14px 32px rgba(212,175,55,.45);
+      box-shadow:0 14px 40px rgba(212,175,55,.55);
+      transform:translateY(-2px);
     }
 
     .photo{
-      max-width:320px;
+      width:300px;
+      height:auto;
       border-radius:18px;
       box-shadow:0 20px 60px rgba(0,0,0,.7);
       border:1px solid rgba(148,163,184,.4);
+      object-fit:cover;
     }
 
     @media (max-width:768px){
-      .hero{
-        padding-top:56px;
-      }
-      .luxe{
-        font-size:1.9rem;
-        letter-spacing:.12em;
-      }
-      .photo{
-        margin-top:1.5rem;
-      }
+      .luxe{font-size:1.9rem;}
+      .photo{margin-top:1.5rem;}
     }
   </style>
 </head>
+
 <body>
   <main class="container">
     <section class="hero">
@@ -138,15 +149,12 @@
         <p class="tagline">CRM • Creative Direction • Digital Strategy</p>
 
         <div class="cta-row">
-          <!-- Main CTA (goes to portfolio brands section) -->
           <a href="#enter" class="cta-btn">Enter Portfolio</a>
-
-          <!-- Gold case studies CTA -->
           <a href="case-studies.html" class="btn-case-gold">View Case Studies</a>
         </div>
       </div>
 
-      <!-- Replace this image URL with any working portrait you want -->
+      <!-- Replace image with any working portrait url -->
       <img
         src="https://i.imgur.com/ZUsH68O.jpeg"
         alt="Judith C. L. Morris"
@@ -156,7 +164,6 @@
   </main>
 
   <script>
-    // Keep the old behavior: when the dark CTA is clicked, jump to brands on the main portfolio page
     document.querySelector(".cta-btn").addEventListener("click", function (e) {
       e.preventDefault();
       window.location.href = "https://jclairemorris.github.io/JudithCLMorris/#brands";
