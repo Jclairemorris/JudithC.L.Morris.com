@@ -1,0 +1,168 @@
+<section id="rogers-case-gallery" class="container-x pb-16">
+  <div class="brand-grid">
+
+    <!-- 1. Desktop – Early Black Friday: Today Only -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-browser">
+        <div class="chrome">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="screen">
+          <img src="https://i.imgur.com/iJlPGrV.png"
+               alt="Roger’s Early Black Friday Today Only desktop hero">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Early Black Friday “Today Only” hero.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Lead creative and promotion framing across channels.</span></p>
+        <p class="stats">Conversions increased by <strong>+21%</strong>; incremental revenue <strong>+$980K</strong>.</p>
+      </div>
+    </div>
+
+    <!-- 2. iPad – Surprise Today Only -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-ipad">
+        <div class="screen">
+          <img src="https://i.imgur.com/UGzlV3W.png"
+               alt="Roger’s Surprise Today Only tablet creative">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Surprise Today Only tablet variation.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Extended hero offer into tablet experience.</span></p>
+        <p class="stats">Mobile + tablet continuity drove <strong>+13%</strong> lift; <strong>+$420K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 3. iPhone – Drop Rectangle Earring (Hero) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-iphone">
+        <div class="notch"></div>
+        <div class="screen">
+          <img src="https://i.imgur.com/6H9dQo9.jpeg"
+               alt="Roger’s Drop Rectangle Earring mobile hero">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Single-SKU hero: Drop Rectangle Earring.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Focused SKU framing for urgency and clarity.</span></p>
+        <p class="stats">Single product emphasis drove <strong>+10%</strong> conversions; <strong>+$260K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 4. iPhone – Drop Rectangle Earring (Variant) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-iphone">
+        <div class="notch"></div>
+        <div class="screen">
+          <img src="https://i.imgur.com/flB4s08.jpeg"
+               alt="Roger’s Drop Rectangle Earring mobile variant">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Drop Rectangle Earring creative variant.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Headline and layout testing for uplift.</span></p>
+        <p class="stats">Variant testing contributed to <strong>+12%</strong> revenue lift.</p>
+      </div>
+    </div>
+
+    <!-- 5. iPad – Scroll A (Abandoned Browse/Cart) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-ipad">
+        <div class="screen">
+          <img src="https://i.imgur.com/b8QppHM.jpeg"
+               alt="Roger’s abandoned browse/cart tablet scroll A">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Abandoned browse/cart – Scroll A.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Recovery journey layout and reassurance copy.</span></p>
+        <p class="stats">Recovered buyers drove <strong>+9%</strong> conversions; <strong>+$340K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 6. iPad – Scroll B (Price Drop) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-ipad">
+        <div class="screen">
+          <img src="https://i.imgur.com/3IsDlgf.jpeg"
+               alt="Roger’s tablet layout with price drop framing">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Price-drop framing with guarantees.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Value and trust messaging layered over sale pricing.</span></p>
+        <p class="stats">Price messaging provided <strong>+7%</strong> conversion lift; <strong>+$220K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 7. iPad – Scroll C (Abandoned Browse/Cart C) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-ipad">
+        <div class="screen">
+          <img src="https://i.imgur.com/gCoeEww.jpeg"
+               alt="Roger’s abandoned browse/cart tablet scroll C">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Abandoned Browse/Cart – Tablet C.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Third-touch refinement for hesitant shoppers.</span></p>
+        <p class="stats">Helped sustain recovery performance across journey.</p>
+      </div>
+    </div>
+
+    <!-- 8. Desktop – Scroll (Email to Site) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-browser">
+        <div class="chrome">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="screen">
+          <img src="https://i.imgur.com/LTqeB8X.jpeg"
+               alt="Roger’s desktop scroll with email-to-site continuity">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Email-to-site continuity for promo landing.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Ensured message match from inbox to homepage.</span></p>
+        <p class="stats">Continuity helped drive <strong>+10%</strong> conversions; <strong>+$410K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 9. MacBook – Scroll (Homepage & PDP Flow) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-macbook">
+        <div class="lid">
+          <div class="screen">
+            <img src="https://i.imgur.com/UH4xL1U.jpeg"
+                 alt="Roger’s homepage and PDP MacBook scroll">
+          </div>
+        </div>
+        <div class="base">
+          <div class="keyboard"></div>
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Desktop experience with sticky CTA.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Clarified benefits and simplified path to add-to-cart.</span></p>
+        <p class="stats">Sticky CTA refinements contributed to <strong>+8%</strong> conversions; <strong>+$270K</strong> revenue.</p>
+      </div>
+    </div>
+
+    <!-- 10. iPad – Surprise Today Only (Second Variant) -->
+    <div class="proj-card accent-rogers">
+      <div class="device device-ipad">
+        <div class="screen">
+          <img src="https://i.imgur.com/SLfu8Vc.jpeg"
+               alt="Roger’s Surprise Today Only iPad variant">
+        </div>
+      </div>
+      <div class="neat-caption mt-3">
+        <p class="u"><strong>Campaign:</strong> <span class="v">Surprise Today Only tablet extension.</span></p>
+        <p class="u"><strong>Role:</strong> <span class="v">Variant creative to keep urgency fresh.</span></p>
+        <p class="stats">Supported overall lift for Early Black Friday ecosystem.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
