@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ISACA &amp; IIA – GRC Conference &amp; Certifications</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    :root{
+      --gold:#D4AF37;
+      --ink:#050320;
+      --card:#050320;
+      --line:#171717;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:radial-gradient(circle at top,#1f2937 0,#020617 55%,#000 100%);
+      color:#e5e7eb;
+      scroll-behavior:smooth;
+    }
+
+    .container-x{
+      width:min(1140px,92vw);
+      margin-inline:auto;
+    }
+
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    .luxe-chrome-text{
+      font-family:"Cinzel Decorative",serif;
+      background:linear-gradient(180deg,#f7f7f7 0%,#f4e7b2 20%,#b88a2a 40%,#f6f2da 65%,#7a5310 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      -webkit-text-fill-color:transparent;
+      text-shadow:0 1px 0 rgba(255,255,255,.22),0 6px 24px rgba(0,0,0,.6);
+      letter-spacing:-.02em;
+    }
+
+    .back-link{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      font-size:.8rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:#e5e7eb;
+      text-decoration:none;
+    }
+    .back-link:hover{color:var(--gold)}
+
+    /* Device frames */
+    .device{
+      position:relative;
+      display:inline-block;
+      transition:transform .5s cubic-bezier(.2,.8,.2,1),box-shadow .5s;
+    }
+    .device .screen{
+      background:#020617;
+      overflow:hidden;
+      width:100%;
+      height:100%;
+      border-radius:inherit;
+      border:1px solid #e5e7eb1a;
+    }
+    .device-iphone{
+      border:4px solid var(--gold);
+      border-radius:26px;
+      width:220px;
+      height:440px;
+      background:#020617;
+      box-shadow:0 10px 40px rgba(0,0,0,.6);
+    }
+    .device-iphone .notch{
+      position:absolute;
+      top:8px;
+      left:50%;
+      transform:translateX(-50%);
+      width:56px;
+      height:12px;
+      background:#020617;
+      border-radius:8px;
+      z-index:2;
+      box-shadow:inset 0 0 0 1px rgba(255,255,255,.08);
+    }
+    .device-browser{
+      width:360px;
+      border:2px solid var(--gold);
+      border-radius:14px;
+      background:#020617;
+      box-shadow:0 16px 40px rgba(0,0,0,.7);
+    }
+    .device-browser .chrome{
+      height:34px;
+      background:linear-gradient(180deg,#f9fafb,#e5e7eb);
+      border-bottom:1px solid var(--gold);
+      border-radius:14px 14px 0 0;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      padding:0 12px;
+    }
+    .dot{width:10px;height:10px;border-radius:50%;background:#9ca3af}
+    .device-browser .screen{
+      height:260px;
+      border-radius:0 0 14px 14px;
+    }
+
+    .screen img{
+      display:block;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .brand-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:28px;
+      justify-items:center;
+      align-items:flex-start;
+    }
+    @media (max-width:840px){
+      .brand-grid{grid-template-columns:1fr;}
+    }
+
+    .proj-card{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      justify-content:center;
+      align-items:center;
+      padding:22px;
+      border-radius:18px;
+      background:var(--card);
+      border:1px solid var(--line);
+      box-shadow:0 12px 44px rgba(0,0,0,.65);
+      text-align:left;
+      margin-inline:auto;
+      max-width:520px;
+    }
+    .proj-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 22px 64px rgba(212,175,55,.25);
+      border-color:rgba(212,175,55,.5);
+    }
+
+    .caption{
+      font-size:.88rem;
+      color:#e5e7eb;
+    }
+    .caption strong{color:#f9fafb}
+
+    .btn-case-ghost{
+      display:inline-flex;
+      align-items:center;
+      gap:.4rem;
+      padding:.8rem 1.5rem;
+      border-radius:999px;
+      border:1px solid rgba(212,175,55,.6);
+      color:#e5e7eb;
+      font-size:.72rem;
+      font-weight:500;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      text-decoration:none;
+      background:transparent;
+      transition:.25s;
+    }
+    .btn-case-ghost:hover{
+      border-color:var(--gold);
+      background:rgba(212,175,55,.14);
+      color:#fefce8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Back to Brands -->
+  <div class="container-x pt-6">
+    <a href="brandsgallery.html" class="back-link">← All Brands</a>
+  </div>
+
+  <!-- Intro -->
+  <header class="container-x pt-6 pb-6">
+    <p class="text-xs tracking-[.25em] uppercase text-slate-300 mb-2">
+      Professional Association · Governance · Risk · Compliance
+    </p>
+    <h1 class="luxe-chrome-text text-4xl mb-3">
+      ISACA &amp; IIA – GRC Conference &amp; Certification Journeys
+    </h1>
+    <p class="text-slate-200 max-w-2xl text-sm sm:text-base">
+      Integrated campaigns for the joint GRC Conference and the “Big 5”
+      ISACA certification programs. I led CRM strategy, email and landing
+      page creative, and automated renewal journeys that kept members engaged,
+      registered, and on track with their CPE hours.
+    </p>
+  </header>
+
+  <!-- Gallery -->
+  <section class="container-x pb-10">
+    <div class="brand-grid">
+
+      <!-- Card 1: GRC Conference integrated campaign -->
+      <div class="proj-card">
+        <div class="device device-browser">
+          <div class="chrome">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="screen">
+            <!-- Replace with your GRC hero image path -->
+            <img src="images/isaca-grc-conf-desktop.png" alt="GRC Conference 2022 email and landing page">
+          </div>
+        </div>
+        <div class="caption">
+          <p>
+            <strong>GRC Conference 2022 – Integrated registration push.</strong>
+            Coordinated email, web, and social assets around a simple promise:
+            one place to get governance, risk, and compliance leaders in the same room.
+          </p>
+          <p class="mt-1">
+            Sequenced pre-launch hype, early-bird urgency, and last-chance reminders
+            to hit registration targets. Email alone drove the majority of sign-ups,
+            with landing-page UX tuned for fast check-out.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2: Certification badges + automated reminders -->
+      <div class="proj-card">
+        <div class="device device-iphone">
+          <div class="notch"></div>
+          <div class="screen">
+            <!-- Replace with your certification badge creative -->
+            <img src="images/isaca-cert-badges-mobile.png" alt="ISACA CISA, CISM, CRISC, CDPSE, CGEIT certification badges">
+          </div>
+        </div>
+        <div class="caption">
+          <p>
+            <strong>Certification prep &amp; renewal journeys.</strong>
+            Always-on flows for the “Big 5” certifications (CISA, CISM, CRISC,
+            CDPSE, CGEIT) promoted training options, exam prep, and member pricing.
+          </p>
+          <p class="mt-1">
+            Predictive renewal reminders combined CPE progress, expiry dates,
+            and time-zone friendly send windows so members saw exactly how many
+            hours they had left and what to do next — reducing last-minute panic
+            and cutting lapsed credentials.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Link to case study -->
+    <div class="mt-10 flex justify-center">
+      <a href="case-studies.html#case-isaca" class="btn-case-ghost">
+        View GRC Case Study
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
